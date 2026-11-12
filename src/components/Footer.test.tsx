@@ -8,7 +8,7 @@ describe("Footer", () => {
 
     expect(
       screen.getByText(
-        new RegExp(`${new Date().getFullYear()} Alemitu Coffee`),
+        new RegExp(`${new Date().getFullYear()} Golden Plate Restaurant`),
       ),
     ).toBeInTheDocument();
   });
