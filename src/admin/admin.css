@@ -245,7 +245,7 @@ body:has(.admin-auth) {
 .admin-auth .admin-card::before {
   content: "";
   height: 56px;
-  background: url("/Alemiti-Coffee-Emblem.png") center / contain no-repeat;
+  background: url("/golden-plate-logo.svg") center / contain no-repeat;
 }
 
 .admin-auth .admin-card h1 {
@@ -835,7 +835,7 @@ body:has(.admin-auth) {
   flex: none;
   width: 32px;
   height: 32px;
-  background: #fff url("/Alemiti-Coffee-Emblem.png") center / 78% no-repeat;
+  background: #fff url("/golden-plate-logo.svg") center / 78% no-repeat;
   border-radius: 50%;
 }
 
@@ -1135,7 +1135,7 @@ body:has(.admin-auth) {
   flex: none;
   width: 32px;
   height: 32px;
-  background: #fff url("/Alemiti-Coffee-Emblem.png") center / 78% no-repeat;
+  background: #fff url("/golden-plate-logo.svg") center / 78% no-repeat;
   border-radius: 50%;
 }
 
