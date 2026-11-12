@@ -3,14 +3,14 @@ import { isLocalAddress, makeQrSvg, normalizeMenuUrl, svgDataUrl } from "./qr";
 
 describe("normalizeMenuUrl", () => {
   it("keeps a full address", () => {
-    expect(normalizeMenuUrl("https://alemitu.example/menu")).toBe(
-      "https://alemitu.example/menu",
+    expect(normalizeMenuUrl("https://goldenplate.example/menu")).toBe(
+      "https://goldenplate.example/menu",
     );
   });
 
   it("adds https:// when it is missing, and trims spaces", () => {
-    expect(normalizeMenuUrl("  alemitu.example/menu ")).toBe(
-      "https://alemitu.example/menu",
+    expect(normalizeMenuUrl("  goldenplate.example/menu ")).toBe(
+      "https://goldenplate.example/menu",
     );
   });
 
@@ -44,14 +44,14 @@ describe("isLocalAddress", () => {
       "http://cafe.local/menu",
     ])
       expect(isLocalAddress(local)).toBe(true);
-    expect(isLocalAddress("https://alemitu.example/menu")).toBe(false);
+    expect(isLocalAddress("https://goldenplate.example/menu")).toBe(false);
     expect(isLocalAddress("http://172.32.0.1/menu")).toBe(false);
   });
 });
 
 describe("makeQrSvg", () => {
   it("draws an SVG QR code", async () => {
-    const svg = await makeQrSvg("https://alemitu.example/menu");
+    const svg = await makeQrSvg("https://goldenplate.example/menu");
     expect(svg.startsWith("<svg")).toBe(true);
     expect(svgDataUrl(svg).startsWith("data:image/svg+xml")).toBe(true);
   });
