@@ -39,7 +39,7 @@ describe("MenuPage header", () => {
     );
 
     expect(
-      screen.queryByRole("link", { name: "Alemitu Coffee home" }),
+      screen.queryByRole("link", { name: "Golden Plate Restaurant home" }),
     ).toBeNull();
   });
 });
