@@ -1,6 +1,6 @@
-# Alemitu Coffee: Digital Menu
+# Golden Plate Restaurant: Digital Menu
 
-A QR-code digital menu with an admin dashboard for Alemitu Coffee.
+A QR-code digital menu with an admin dashboard for Golden Plate Restaurant.
 
 **Live site:** https://alemitu-coffee.pages.dev (menu: [/menu](https://alemitu-coffee.pages.dev/menu), admin: [/admin](https://alemitu-coffee.pages.dev/admin))
 
