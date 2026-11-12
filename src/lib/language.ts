@@ -1,6 +1,6 @@
 export type Lang = "en" | "am";
 
-const STORAGE_KEY = "alemitu-lang";
+const STORAGE_KEY = "golden-plate-lang";
 
 /** Amharic text when present and not blank, otherwise English. */
 export function pickText(
