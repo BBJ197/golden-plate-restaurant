@@ -1,75 +1,66 @@
 import { Link } from "react-router-dom";
-import heroImg from "../assets/images/hero.webp";
+import plate from "../assets/images/non-fasting-foods.webp";
+import dessert from "../assets/images/dessert.webp";
+import fasting from "../assets/images/fasting-foods.webp";
+import drinks from "../assets/images/refreshment.webp";
 
 export default function Hero() {
   return (
-    <section className="hero-section">
-      <div className="hero-beans" aria-hidden="true">
-        <span className="hero-bean" />
-        <span className="hero-bean" />
-        <span className="hero-bean" />
-        <span className="hero-bean" />
-        <span className="hero-bean" />
-        <span className="hero-bean" />
-      </div>
-      <span className="hero-watermark" aria-hidden="true">
-        {"\u1261\u1293"}
-      </span>
-      <div className="section-content">
-        <div className="hero-details">
-          <p className="hero-eyebrow">
-            <span className="hero-eyebrow-line" aria-hidden="true" />
-            Alemitu Coffee
-            <span lang="am">{"\u1261\u1293"}</span>
-          </p>
-          <h1 className="title">Best Coffee</h1>
-          <p className="subtitle">
-            Make your day great with our special coffee!
-          </p>
-          <p className="description">
-            Welcome to our coffee paradise, where every bean tells a story and
-            every cup sparks joy.
-          </p>
-          <div className="buttons">
-            <Link to="/menu" className="button order-now">
-              View Menu
-            </Link>
-            <a href="#contact" className="button contact-us">
-              Contact Us
-            </a>
+    <section className="gp-hero" data-scene="sticky" data-tilt>
+      <div className="gp-hero-stage">
+        <div className="gp-hero-inner">
+          <div className="gp-hero-copy">
+            <p className="gp-eyebrow">
+              Fine Ethiopian dining &middot; Addis Ababa
+            </p>
+            <h1 className="gp-title gp-serif">
+              <span className="gp-line">
+                <span>Golden</span>
+              </span>{" "}
+              <span className="gp-line">
+                <span>Plate</span>
+              </span>
+            </h1>
+            <p className="gp-sub">Restaurant</p>
+            <p className="gp-lead">
+              A modern table for Ethiopia&rsquo;s most celebrated flavours, from
+              slow-brewed coffee to festive feasts, served with warmth.
+            </p>
+            <div className="gp-actions">
+              <Link to="/menu" className="gp-btn gp-btn-gold">
+                View Menu
+              </Link>
+              <a href="#contact" className="gp-btn gp-btn-ghost">
+                Visit Us
+              </a>
+            </div>
           </div>
-          <ol className="hero-steps">
-            <li>
-              <span>01</span>Roasted fresh
-            </li>
-            <li>
-              <span>02</span>Brewed in a jebena
-            </li>
-            <li>
-              <span>03</span>Served with love
-            </li>
-          </ol>
-        </div>
-        <div className="hero-image-wrapper">
-          <span className="hero-rings" aria-hidden="true" />
-          <div className="hero-float">
-            <img
-              src={heroImg}
-              alt="Traditional Ethiopian jebena coffee pot beside a painted cup with a splash of coffee, surrounded by coffee beans and spices"
-              className="hero-image"
-            />
-            <span className="hero-ripple" aria-hidden="true" />
-            <span className="hero-ripple hero-ripple-2" aria-hidden="true" />
-            <span className="hero-ripple hero-ripple-3" aria-hidden="true" />
-            <span className="hero-steam hero-steam-1" aria-hidden="true" />
-            <span className="hero-steam hero-steam-2" aria-hidden="true" />
-            <span className="hero-steam hero-steam-3" aria-hidden="true" />
-            <span className="hero-steam hero-steam-4" aria-hidden="true" />
-            <span className="hero-steam hero-steam-5" aria-hidden="true" />
+          <div className="gp-scene">
+            <span className="gp-ring gp-ring-2" aria-hidden="true" />
+            <span className="gp-ring gp-ring-1" aria-hidden="true" />
+            <div className="gp-plate">
+              <img
+                src={plate}
+                alt="Ethiopian meat dishes in a black clay pot while spiced butter is poured over them"
+                width="520"
+                height="546"
+                fetchPriority="high"
+                decoding="async"
+              />
+            </div>
+            <span className="gp-sat gp-sat-1">
+              <img src={dessert} alt="" width="418" height="280" />
+            </span>
+            <span className="gp-sat gp-sat-2">
+              <img src={fasting} alt="" width="370" height="328" />
+            </span>
+            <span className="gp-sat gp-sat-3">
+              <img src={drinks} alt="" width="311" height="276" />
+            </span>
           </div>
         </div>
+        <span className="gp-cue" aria-hidden="true" />
       </div>
-      <span className="hero-scroll" aria-hidden="true" />
     </section>
   );
 }
