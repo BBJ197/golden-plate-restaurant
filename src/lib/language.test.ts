@@ -30,7 +30,7 @@ describe("pickOptional", () => {
 describe("language storage", () => {
   it("defaults to English and ignores unknown stored values", () => {
     expect(loadLang()).toBe("en");
-    localStorage.setItem("alemitu-lang", "xx");
+    localStorage.setItem("golden-plate-lang", "xx");
     expect(loadLang()).toBe("en");
   });
 
