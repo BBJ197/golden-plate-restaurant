@@ -5,7 +5,7 @@ export default function NotFoundPage() {
     <main id="main" className="not-found">
       <img
         className="not-found-logo"
-        src="/Alemiti-Coffee-Emblem.png"
+        src="/golden-plate-logo.svg"
         alt=""
         width={96}
         height={96}
