@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/images/Alemiti-Coffee-Emblem.png";
 import Icon from "./Icon";
 
 type NavLink = { label: string; href?: string; to?: string };
@@ -39,8 +38,8 @@ export default function Navbar() {
       <nav className="nav-bar section-content">
         <a href="#" className="nv-logo">
           <span className="nav-text">
-            <img src={logo} alt="" />
-            Alemitu
+            <img src="/golden-plate-logo.svg" alt="" />
+            Golden Plate{" "}
           </span>
         </a>
 
