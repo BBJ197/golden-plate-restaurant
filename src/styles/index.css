@@ -9,7 +9,7 @@
   /* Colors */
   --white-color: #fff;
   --dark-color: #252525;
-  --primary-color: #3b141c;
+  --primary-color: #141414;
   --secondary-color: #f3961c;
   --light-pink-color: #faf4f5;
   --medium-gray-color: #ccc;
@@ -912,7 +912,7 @@ header .nav-bar {
 }
 
 .menu-filters {
-  box-shadow: 0 6px 8px -8px rgba(59, 20, 28, 0.35);
+  box-shadow: 0 6px 8px -8px rgba(20, 20, 20, 0.35);
 }
 
 .menu-page section > h2 {
@@ -925,8 +925,8 @@ header .nav-bar {
 .menu-card {
   align-items: flex-start;
   background: var(--white-color);
-  border-color: rgba(59, 20, 28, 0.12);
-  box-shadow: 0 1px 2px rgba(59, 20, 28, 0.06);
+  border-color: rgba(20, 20, 20, 0.12);
+  box-shadow: 0 1px 2px rgba(20, 20, 20, 0.06);
   transition:
     transform 0.15s ease,
     box-shadow 0.15s ease;
@@ -934,7 +934,7 @@ header .nav-bar {
 
 .menu-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(59, 20, 28, 0.14);
+  box-shadow: 0 8px 18px rgba(20, 20, 20, 0.14);
 }
 
 .menu-card h3 {
@@ -970,7 +970,7 @@ header .nav-bar {
   font-size: 0.75rem;
   color: var(--primary-color);
   background: var(--light-pink-color);
-  border: 1px solid rgba(59, 20, 28, 0.15);
+  border: 1px solid rgba(20, 20, 20, 0.15);
   border-radius: 999px;
 }
 
@@ -981,7 +981,7 @@ header .nav-bar {
 
 .menu-card.is-unavailable:hover {
   transform: none;
-  box-shadow: 0 1px 2px rgba(59, 20, 28, 0.06);
+  box-shadow: 0 1px 2px rgba(20, 20, 20, 0.06);
 }
 
 .menu-unavailable {
@@ -1117,8 +1117,8 @@ header .nav-bar {
   z-index: 4;
   padding: 0.5rem var(--menu-gutter);
   background: var(--white-color);
-  border-bottom: 1px solid rgba(59, 20, 28, 0.1);
-  box-shadow: 0 6px 8px -8px rgba(59, 20, 28, 0.35);
+  border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+  box-shadow: 0 6px 8px -8px rgba(20, 20, 20, 0.35);
 }
 
 .menu-category-bar .menu-chip-row {
@@ -1190,7 +1190,7 @@ header .nav-bar {
     right: 0.625rem;
     margin: 0;
     background: rgba(255, 255, 255, 0.94);
-    box-shadow: 0 1px 4px rgba(59, 20, 28, 0.2);
+    box-shadow: 0 1px 4px rgba(20, 20, 20, 0.2);
   }
 }
 
@@ -1355,7 +1355,7 @@ header .nav-bar {
   padding-left: 2.75rem;
   background: var(--white-color);
   border-radius: 999px;
-  box-shadow: 0 2px 8px rgba(59, 20, 28, 0.08);
+  box-shadow: 0 2px 8px rgba(20, 20, 20, 0.08);
 }
 
 .menu-chip {
