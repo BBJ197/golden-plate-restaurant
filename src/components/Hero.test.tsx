@@ -8,14 +8,14 @@ describe("Hero", () => {
     render(<Hero />, { wrapper: MemoryRouter });
 
     expect(
-      screen.getAllByRole("heading", { level: 1, name: "Best Coffee" }),
+      screen.getAllByRole("heading", { level: 1, name: "Golden Plate" }),
     ).toHaveLength(1);
   });
 
   it("describes the hero image for screen readers", () => {
     render(<Hero />, { wrapper: MemoryRouter });
 
-    expect(screen.getByRole("img", { name: /jebena/i })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: /clay pot/i })).toBeInTheDocument();
   });
 
   it("links to the menu without implying online ordering", () => {

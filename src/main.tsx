@@ -17,6 +17,9 @@ import "./styles/menu-theme.css";
 import "./styles/menu-modern.css";
 import "./styles/menu-enter.css";
 import "./styles/not-found.css";
+import "@fontsource/cormorant-garamond/latin-500.css";
+import "@fontsource/cormorant-garamond/latin-500-italic.css";
+import "./styles/golden.css";
 import App from "./App";
 
 const queryClient = new QueryClient();

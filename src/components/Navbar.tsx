@@ -34,19 +34,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header>
-      <nav className="nav-bar section-content">
-        <a href="#" className="nv-logo">
-          <span className="nav-text">
-            <img src="/golden-plate-logo.svg" alt="" />
-            Golden Plate{" "}
-          </span>
+    <header className="gp-header">
+      <nav className="gp-nav" aria-label="Main">
+        <a href="#" className="gp-brand">
+          <img src="/golden-plate-logo.svg" alt="" width="36" height="36" />
+          <span className="gp-serif">Golden Plate</span>
         </a>
 
-        <ul className={`nav-menu ${open ? "active" : ""}`} ref={menuRef}>
-          <li className="nav-close-item">
+        <ul className={`gp-menu ${open ? "active" : ""}`} ref={menuRef}>
+          <li className="gp-menu-close">
             <button
-              id="menu-close-button"
               type="button"
               aria-label="Close menu"
               onClick={() => setOpen(false)}
@@ -54,23 +51,14 @@ export default function Navbar() {
               <Icon icon={faXmark} />
             </button>
           </li>
-
           {links.map((link) => (
-            <li className="nav-item" key={link.label}>
+            <li key={link.label}>
               {link.to ? (
-                <Link
-                  to={link.to}
-                  className="nav-link"
-                  onClick={() => setOpen(false)}
-                >
+                <Link to={link.to} onClick={() => setOpen(false)}>
                   {link.label}
                 </Link>
               ) : (
-                <a
-                  href={link.href}
-                  className="nav-link"
-                  onClick={() => setOpen(false)}
-                >
+                <a href={link.href} onClick={() => setOpen(false)}>
                   {link.label}
                 </a>
               )}
@@ -79,7 +67,7 @@ export default function Navbar() {
         </ul>
 
         <button
-          id="menu-open-button"
+          className="gp-burger"
           type="button"
           aria-label="Open menu"
           ref={openBtnRef}

@@ -6,20 +6,14 @@ export default function Footer() {
   const links = socialLinks.filter((s) => s.href);
 
   return (
-    <footer className="footer-section">
-      <div className="section-content">
-        <p className="copyright-text">
-          &copy; {currentYear} Alemitu Coffee. All rights reserved.
+    <footer className="gp-footer">
+      <div className="gp-wrap gp-footer-row">
+        <p>
+          &copy; {currentYear} Golden Plate Restaurant. All rights reserved.
         </p>
-
-        <div className="social-link-list">
+        <div className="gp-social">
           {links.map((s) => (
-            <a
-              href={s.href}
-              className="social-link"
-              aria-label={s.label}
-              key={s.id}
-            >
+            <a href={s.href} aria-label={s.label} key={s.id}>
               <Icon icon={s.icon} />
             </a>
           ))}

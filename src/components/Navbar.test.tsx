@@ -8,7 +8,7 @@ describe("Navbar", () => {
   it("opens and closes the mobile menu", async () => {
     const user = userEvent.setup();
     const { container } = render(<Navbar />, { wrapper: MemoryRouter });
-    const menu = container.querySelector(".nav-menu");
+    const menu = container.querySelector(".gp-menu");
 
     expect(menu).not.toHaveClass("active");
 
@@ -22,7 +22,7 @@ describe("Navbar", () => {
   it("closes the mobile menu after a link is clicked", async () => {
     const user = userEvent.setup();
     const { container } = render(<Navbar />, { wrapper: MemoryRouter });
-    const menu = container.querySelector(".nav-menu");
+    const menu = container.querySelector(".gp-menu");
 
     await user.click(screen.getByRole("button", { name: "Open menu" }));
     expect(menu).toHaveClass("active");
