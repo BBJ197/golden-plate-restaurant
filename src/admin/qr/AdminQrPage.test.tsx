@@ -66,10 +66,10 @@ describe("admin QR page", () => {
 
   it("redraws for a real address and drops the local warning", async () => {
     renderPage();
-    await setAddress("https://alemitu.example/menu");
+    await setAddress("https://goldenplate.example/menu");
     expect(
       await screen.findByAltText(
-        "QR code that opens https://alemitu.example/menu",
+        "QR code that opens https://goldenplate.example/menu",
       ),
     ).toBeInTheDocument();
     expect(screen.queryByRole("alert")).not.toBeInTheDocument();
@@ -77,7 +77,7 @@ describe("admin QR page", () => {
 
   it("hints when the address does not end in /menu", async () => {
     renderPage();
-    await setAddress("https://alemitu.example");
+    await setAddress("https://goldenplate.example");
     expect(await screen.findByRole("status")).toHaveTextContent(
       "doesn't end in /menu",
     );
@@ -96,33 +96,35 @@ describe("admin QR page", () => {
 
   it("downloads the PNG", async () => {
     renderPage();
-    const user = await setAddress("https://alemitu.example/menu");
-    await screen.findByAltText(/QR code that opens https:\/\/alemitu/);
+    const user = await setAddress("https://goldenplate.example/menu");
+    await screen.findByAltText(/QR code that opens https:\/\/goldenplate/);
     await user.click(screen.getByRole("button", { name: "Download PNG" }));
-    expect(qr.makeQrPng).toHaveBeenCalledWith("https://alemitu.example/menu");
+    expect(qr.makeQrPng).toHaveBeenCalledWith(
+      "https://goldenplate.example/menu",
+    );
     expect(qr.downloadFile).toHaveBeenCalledWith(
       "data:image/png;base64,AAAA",
-      "alemitu-menu-qr.png",
+      "golden-plate-menu-qr.png",
     );
     expect(await screen.findByText("PNG downloaded.")).toBeInTheDocument();
   });
 
   it("downloads the SVG", async () => {
     renderPage();
-    const user = await setAddress("https://alemitu.example/menu");
-    await screen.findByAltText(/QR code that opens https:\/\/alemitu/);
+    const user = await setAddress("https://goldenplate.example/menu");
+    await screen.findByAltText(/QR code that opens https:\/\/goldenplate/);
     await user.click(screen.getByRole("button", { name: "Download SVG" }));
     expect(qr.downloadFile).toHaveBeenCalledWith(
       expect.stringMatching(/^data:image\/svg\+xml/),
-      "alemitu-menu-qr.svg",
+      "golden-plate-menu-qr.svg",
     );
   });
 
   it("says so when the PNG cannot be made", async () => {
     vi.mocked(qr.makeQrPng).mockRejectedValue(new Error("no canvas"));
     renderPage();
-    const user = await setAddress("https://alemitu.example/menu");
-    await screen.findByAltText(/QR code that opens https:\/\/alemitu/);
+    const user = await setAddress("https://goldenplate.example/menu");
+    await screen.findByAltText(/QR code that opens https:\/\/goldenplate/);
     await user.click(screen.getByRole("button", { name: "Download PNG" }));
     expect(
       await screen.findByText(/Couldn't make the PNG/),

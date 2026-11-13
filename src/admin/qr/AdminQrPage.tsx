@@ -42,7 +42,7 @@ export default function AdminQrPage() {
     if (!href) return;
     setMessage(null);
     try {
-      downloadFile(await makeQrPng(href), "alemitu-menu-qr.png");
+      downloadFile(await makeQrPng(href), "golden-plate-menu-qr.png");
       setMessage("PNG downloaded.");
     } catch {
       setMessage("Couldn't make the PNG. Try the SVG instead.");
@@ -52,7 +52,7 @@ export default function AdminQrPage() {
   function saveSvg() {
     if (!svg) return;
     setMessage(null);
-    downloadFile(svgDataUrl(svg), "alemitu-menu-qr.svg");
+    downloadFile(svgDataUrl(svg), "golden-plate-menu-qr.svg");
     setMessage("SVG downloaded.");
   }
 

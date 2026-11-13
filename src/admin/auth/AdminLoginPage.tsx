@@ -34,7 +34,7 @@ export default function AdminLoginPage() {
     <main id="main" className="admin-auth">
       <form className="admin-card" onSubmit={handleSubmit}>
         <h1>Staff sign-in</h1>
-        <p>Manage the Alemitu Coffee menu.</p>
+        <p>Manage the Golden Plate Restaurant menu.</p>
 
         <div className="admin-field">
           <label htmlFor="admin-email">Email</label>

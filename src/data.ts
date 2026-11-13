@@ -110,7 +110,7 @@ export const contactInfo = [
     text: "Tuesday - Sunday: 9:00 AM - 5:00 PM",
   },
   { id: 5, icon: faClock, text: "Monday: Closed" },
-  { id: 6, icon: faGlobe, text: "www.alemitucoffee.com" },
+  { id: 6, icon: faGlobe, text: "www.goldenplate.com" },
 ];
 
 export const socialLinks = [

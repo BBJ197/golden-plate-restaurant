@@ -79,7 +79,7 @@ describe("MenuPage language toggle", () => {
   it("remembers the choice", () => {
     const first = renderPage();
     fireEvent.click(screen.getByRole("button", { name: "Amharic" }));
-    expect(localStorage.getItem("alemitu-lang")).toBe("am");
+    expect(localStorage.getItem("golden-plate-lang")).toBe("am");
     first.unmount();
     renderPage();
     expect(screen.getByText(AM_NAME)).toBeTruthy();

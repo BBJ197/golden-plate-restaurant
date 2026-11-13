@@ -37,7 +37,7 @@ export default function AdminLayout() {
       <header className="admin-header">
         <Link to="/admin" className="admin-brand">
           <span className="admin-brand__mark" aria-hidden="true" />
-          <span>Alemitu admin</span>
+          <span>Golden Plate admin</span>
         </Link>
         <nav className="admin-nav" aria-label="Admin">
           {groups.map((g) => (

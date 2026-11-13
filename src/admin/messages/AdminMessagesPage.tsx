@@ -65,7 +65,7 @@ export default function AdminMessagesPage() {
             <div className="admin-row">
               <a
                 className="admin-button"
-                href={`mailto:${m.email}?subject=${encodeURIComponent("Re: your message to Alemitu Coffee")}`}
+                href={`mailto:${m.email}?subject=${encodeURIComponent("Re: your message to Golden Plate Restaurant")}`}
               >
                 Reply
               </a>
