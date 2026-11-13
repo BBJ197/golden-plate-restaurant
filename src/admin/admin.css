@@ -1,6 +1,6 @@
 /* Admin styles: one neutral, consistent design. Loaded with the lazy admin chunk. */
 :root {
-  --adm-brand: var(--primary-color, #3b141c);
+  --adm-brand: var(--primary-color, #141414);
   --adm-brand-hover: #54202b;
   --adm-bg: #f5f4f3;
   --adm-panel: #fff;
@@ -822,7 +822,7 @@ body:has(.admin-auth) {
 }
 
 .admin-header {
-  background: linear-gradient(180deg, #3b141c 0%, #260c12 100%);
+  background: linear-gradient(180deg, #141414 0%, #0e0e0e 100%);
 }
 
 .admin-brand {
@@ -857,7 +857,7 @@ body:has(.admin-auth) {
   width: 34px;
   height: 34px;
   font-weight: 700;
-  color: #3b141c;
+  color: #141414;
   background: var(--adm-gold);
   border-radius: 50%;
   place-items: center;
@@ -915,7 +915,7 @@ body:has(.admin-auth) {
       rgba(217, 164, 65, 0.35),
       transparent 55%
     ),
-    linear-gradient(135deg, #3b141c, #6b2a38);
+    linear-gradient(135deg, #141414, #2c2c2c);
   border-radius: 12px;
 }
 
@@ -965,7 +965,7 @@ body:has(.admin-auth) {
 }
 
 .admin-action--primary {
-  color: #3b141c;
+  color: #141414;
   background: var(--adm-gold);
   border-color: var(--adm-gold);
 }
@@ -1003,7 +1003,7 @@ body:has(.admin-auth) {
 }
 
 .admin-stat--brand {
-  --tone: #6b2a38;
+  --tone: #2c2c2c;
 }
 
 .admin-stat--ok {
@@ -1122,7 +1122,7 @@ body:has(.admin-auth) {
 }
 
 .admin-header {
-  background: linear-gradient(180deg, #3b141c 0%, #260c12 100%);
+  background: linear-gradient(180deg, #141414 0%, #0e0e0e 100%);
 }
 
 .admin-brand {
@@ -1157,7 +1157,7 @@ body:has(.admin-auth) {
   width: 34px;
   height: 34px;
   font-weight: 700;
-  color: #3b141c;
+  color: #141414;
   background: var(--adm-gold);
   border-radius: 50%;
   place-items: center;
@@ -1215,7 +1215,7 @@ body:has(.admin-auth) {
       rgba(217, 164, 65, 0.35),
       transparent 55%
     ),
-    linear-gradient(135deg, #3b141c, #6b2a38);
+    linear-gradient(135deg, #141414, #2c2c2c);
   border-radius: 12px;
 }
 
@@ -1265,7 +1265,7 @@ body:has(.admin-auth) {
 }
 
 .admin-action--primary {
-  color: #3b141c;
+  color: #141414;
   background: var(--adm-gold);
   border-color: var(--adm-gold);
 }
@@ -1315,7 +1315,7 @@ body:has(.admin-auth) {
 }
 
 .admin-stat--brand {
-  --tone: #6b2a38;
+  --tone: #2c2c2c;
 }
 
 .admin-stat--ok {
@@ -1537,7 +1537,7 @@ section[aria-labelledby^="cat-"] > p {
 .admin-thumb--empty {
   display: grid;
   font-weight: 700;
-  color: #6b2a38;
+  color: #2c2c2c;
   background: #f4ece7;
   place-items: center;
 }

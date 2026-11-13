@@ -14,7 +14,7 @@
     linear-gradient(
       180deg,
       var(--primary-color) 0%,
-      #2b0f15 60%,
+      #0e0e0e 60%,
       var(--dark-color)
     );
   background-repeat: no-repeat;
@@ -237,7 +237,7 @@
 .menu-page {
   background-image:
     radial-gradient(circle at 85% 0%, rgba(243, 150, 28, 0.1), transparent 40%),
-    linear-gradient(180deg, #2b0f15 0%, #1c0a0e 45%, #141414 100%);
+    linear-gradient(180deg, #0e0e0e 0%, #1c0a0e 45%, #141414 100%);
 }
 
 /* Category chips match the search bar and filter button, calmer bar */
@@ -407,7 +407,7 @@
 .menu-page .menu-card,
 .menu-page .menu-card.no-photo,
 .menu-page .menu-popular .menu-card {
-  background: rgba(70, 28, 38, 0.72);
+  background: rgba(34, 34, 34, 0.72);
   backdrop-filter: blur(6px);
 }
 

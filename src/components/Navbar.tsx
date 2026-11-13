@@ -37,8 +37,7 @@ export default function Navbar() {
     <header className="gp-header">
       <nav className="gp-nav" aria-label="Main">
         <a href="#" className="gp-brand">
-          <img src="/golden-plate-logo.svg" alt="" width="36" height="36" />
-          <span className="gp-serif">Golden Plate</span>
+          <span className="gp-script">Golden Plate</span>
         </a>
 
         <ul className={`gp-menu ${open ? "active" : ""}`} ref={menuRef}>
