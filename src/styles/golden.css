@@ -1444,3 +1444,20 @@ header.gp-header {
     width: 44%;
   }
 }
+
+/* hero mobile: bigger salad and cake, further out, plate a bit smaller */
+@media (max-width: 860px) {
+  .gp-scene {
+    width: min(66vw, 17rem);
+  }
+  .gp-fx-fruit {
+    left: -24%;
+    bottom: 10%;
+    width: 52%;
+  }
+  .gp-fx-extra {
+    right: -24%;
+    top: -2%;
+    width: 56%;
+  }
+}
