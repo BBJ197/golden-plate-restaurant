@@ -1546,3 +1546,13 @@ header.gp-header {
       rotate(calc(var(--p, 0) * 90deg));
   }
 }
+
+/* home menu: make the wine photo bigger (it is smaller than the others) */
+.gp-dish-1 .gp-dish-art img {
+  scale: 1.45;
+}
+@media (max-width: 860px) {
+  .gp-dish-1 .gp-dish-art img {
+    scale: 1.3;
+  }
+}
