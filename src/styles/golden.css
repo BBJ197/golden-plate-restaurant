@@ -977,3 +977,8 @@ header.gp-header {
   transform: translate3d(calc(var(--p, 0) * 70px), calc(var(--p, 0) * -60px), 0)
     rotate(calc(var(--p, 0) * 35deg));
 }
+.gp-fx-extra {
+  right: -38%;
+  top: 22%;
+  width: 44%;
+}
