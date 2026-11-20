@@ -1271,3 +1271,6 @@ header.gp-header {
       -1400px 1400px;
   }
 }
+.gp-hero-stage::before {
+  content: none;
+}
