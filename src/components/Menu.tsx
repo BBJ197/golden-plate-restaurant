@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { menuItems } from "../data";
 
-// Item 5 has a flat white photo background, so it is left out of the floating-plate layout.
-const dishes = menuItems.filter((item) => item.id !== 5);
+// Order the dishes appear in (menu ids).
+const order = [3, 5, 4, 6, 1, 2];
+const dishes = order.flatMap((id) =>
+  menuItems.filter((item) => item.id === id),
+);
 
 export default function Menu() {
   return (
