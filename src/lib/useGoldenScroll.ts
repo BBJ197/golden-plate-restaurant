@@ -26,7 +26,10 @@ export function useGoldenScroll() {
         const r = el.getBoundingClientRect();
         const p =
           el.dataset.scene === "sticky"
-            ? clamp(-r.top / Math.max(1, r.height - vh))
+            ? clamp(
+                -r.top /
+                  Math.max(1, r.height > vh * 1.3 ? r.height - vh : vh * 1.2),
+              )
             : clamp((vh - r.top) / (vh + r.height));
         el.style.setProperty("--p", p.toFixed(3));
       }
