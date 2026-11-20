@@ -968,3 +968,12 @@ header.gp-header {
 .gp-sprinkle-shaker {
   animation-duration: 3.4s;
 }
+.gp-fx-extra {
+  right: -22%;
+  top: 4%;
+  width: 30%;
+}
+.gp-motion .gp-fx-extra {
+  transform: translate3d(calc(var(--p, 0) * 70px), calc(var(--p, 0) * -60px), 0)
+    rotate(calc(var(--p, 0) * 35deg));
+}
