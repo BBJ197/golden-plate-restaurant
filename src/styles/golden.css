@@ -1389,3 +1389,23 @@ header.gp-header {
     bottom: -2%;
   }
 }
+
+/* hero: cake further to top right, sauce closer to the plate */
+@media (min-width: 861px) {
+  .gp-fx-extra {
+    right: -50%;
+    top: -2%;
+  }
+  .gp-salt-b {
+    right: -23%;
+  }
+}
+@media (max-width: 860px) {
+  .gp-fx-extra {
+    right: -20%;
+    top: 2%;
+  }
+  .gp-salt-b {
+    right: -3%;
+  }
+}
