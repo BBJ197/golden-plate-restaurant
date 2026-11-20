@@ -16,7 +16,12 @@ export default function Menu() {
       </div>
       <ul>
         {dishes.map((item) => (
-          <li className="gp-dish" key={item.id} data-scene="" data-reveal>
+          <li
+            className={`gp-dish gp-dish-${item.id}`}
+            key={item.id}
+            data-scene=""
+            data-reveal
+          >
             <div className="gp-dish-art">
               <img
                 src={item.image}
