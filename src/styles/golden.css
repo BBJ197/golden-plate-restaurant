@@ -1159,3 +1159,63 @@ header.gp-header {
       100% 0;
   }
 }
+.gp-hero-stage::before {
+  inset: auto;
+  left: 68%;
+  top: 48%;
+  width: 130vmin;
+  height: 130vmin;
+  translate: -50% -50%;
+  background: repeating-conic-gradient(
+    rgba(212, 175, 55, 0.2) 0 3deg,
+    transparent 3deg 12deg
+  );
+  mask-image: radial-gradient(circle, #000 12%, transparent 62%);
+  animation: gp-spin 80s linear infinite;
+}
+.gp-hero-stage::after {
+  background-image:
+    radial-gradient(circle, rgba(246, 226, 122, 1) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 1.5px, transparent 2.5px);
+}
+.gp-scene::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 155%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle,
+    transparent 0 30px,
+    rgba(230, 184, 74, 0.4) 30px 31px
+  );
+  mask-image: radial-gradient(circle, #000 30%, transparent 68%);
+  pointer-events: none;
+  animation: gp-ring 7s ease-in-out infinite alternate;
+}
+@keyframes gp-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes gp-ring {
+  from {
+    scale: 0.92;
+    opacity: 0.5;
+  }
+  to {
+    scale: 1.06;
+    opacity: 1;
+  }
+}
+@keyframes gp-twinkle {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
