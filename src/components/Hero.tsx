@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import pan from "../assets/images/menu-background.webp";
-import fruit from "../assets/images/refreshment.webp";
-import cup from "../assets/images/hot-beveragrs.webp";
+import main from "../assets/images/central.png";
+import sause from "../assets/images/sause.png";
+import salt from "../assets/images/salt.png";
+import salad from "../assets/images/wooden.png";
+import cake from "../assets/images/Strawberry chocolate cake.png";
 
 export default function Hero() {
   return (
@@ -32,45 +34,58 @@ export default function Hero() {
           </div>
           <div className="gp-scene">
             <img
-              className="gp-salt gp-salt-a"
-              src="/golden/salt.svg"
-              alt=""
-              width="400"
-              height="400"
-            />
-            <img
-              className="gp-fx gp-fx-sprig"
-              src="/golden/sprig.svg"
-              alt=""
-              width="120"
-              height="190"
-            />
-            <img
               className="gp-pan"
-              src={pan}
+              src={main}
               alt="A cast-iron pan of freshly roasted coffee beans"
-              width="720"
+              width="820"
               height="960"
               fetchPriority="high"
               decoding="async"
             />
             <img
               className="gp-fx gp-fx-fruit"
-              src={fruit}
+              src={salad}
               alt=""
               width="311"
               height="276"
             />
             <img
-              className="gp-fx gp-fx-cup"
-              src={cup}
+              className="gp-fx gp-fx-extra"
+              src={cake}
               alt=""
-              width="511"
-              height="382"
+              width="311"
+              height="276"
             />
+            <div className="gp-sprinkle" aria-hidden="true">
+              <img
+                className="gp-sprinkle-shaker"
+                src={salt}
+                alt=""
+                width="511"
+                height="382"
+              />
+              <span className="gp-grains">
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+              </span>
+            </div>
             <img
               className="gp-salt gp-salt-b"
-              src="/golden/salt.svg"
+              src={sause}
               alt=""
               width="400"
               height="400"
