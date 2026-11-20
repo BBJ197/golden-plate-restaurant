@@ -803,3 +803,16 @@ header.gp-header {
   transform: translate3d(calc(var(--p, 0) * 60px), calc(var(--p, 0) * 70px), 0)
     rotate(calc(var(--p, 0) * 40deg));
 }
+.gp-salt-b {
+  right: -40%;
+  bottom: -34%;
+  width: 50%;
+}
+.gp-motion .gp-salt-b {
+  transform: translate3d(
+      calc(var(--p, 0) * 120px),
+      calc(var(--p, 0) * 140px),
+      0
+    )
+    rotate(calc(var(--p, 0) * 40deg));
+}
