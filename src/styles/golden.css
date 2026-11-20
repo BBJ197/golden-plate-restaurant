@@ -977,3 +977,20 @@ header.gp-header {
   transform: translate3d(calc(var(--p, 0) * 70px), calc(var(--p, 0) * -60px), 0)
     rotate(calc(var(--p, 0) * 35deg));
 }
+@media (max-width: 860px) {
+  .gp-hero-stage {
+    padding-top: 9rem;
+  }
+  .gp-hero-inner {
+    gap: 4rem;
+  }
+  .gp-scene {
+    order: -1;
+  }
+  .gp-hero-copy {
+    text-align: center;
+  }
+  .gp-actions {
+    justify-content: center;
+  }
+}
