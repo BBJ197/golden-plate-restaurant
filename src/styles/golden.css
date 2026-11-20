@@ -766,3 +766,21 @@ header.gp-header {
 .gp-grains {
   z-index: 0;
 }
+.gp-grains {
+  display: none;
+}
+.gp-sprinkle-shaker {
+  transform-origin: 80% 15%;
+  animation: gp-sway 4s ease-in-out infinite;
+}
+@keyframes gp-sway {
+  0%,
+  100% {
+    rotate: -2deg;
+    translate: 0 0;
+  }
+  50% {
+    rotate: 2.5deg;
+    translate: 0.6cqw 0.8cqw;
+  }
+}
