@@ -1335,3 +1335,29 @@ header.gp-header {
     width: 46%;
   }
 }
+
+/* hero: bigger cake, smaller sauce moved away from the plate */
+@media (min-width: 861px) {
+  .gp-fx-extra {
+    right: -38%;
+    top: 16%;
+    width: 64%;
+  }
+  .gp-salt-b {
+    right: -36%;
+    bottom: 4%;
+    width: 38%;
+  }
+}
+@media (max-width: 860px) {
+  .gp-fx-extra {
+    right: -14%;
+    top: 18%;
+    width: 56%;
+  }
+  .gp-salt-b {
+    right: -14%;
+    bottom: 2%;
+    width: 34%;
+  }
+}
