@@ -19,39 +19,39 @@ import dessert from "./assets/images/dessert.webp";
 export const menuItems = [
   {
     id: 1,
-    name: "Hot Beverages",
+    name: "Wine Cellar",
     image: hotBeverages,
-    text: "Wide range of Steaming hot coffee to make you fresh and light.",
+    text: "A curated list of rare vintages and sommelier-selected pours, by the glass or bottle.",
   },
   {
     id: 2,
-    name: "Cold Beverages",
+    name: "Craft Cocktails",
     image: coldBeverages,
-    text: "Creamy and frothy cold Tej and Tela to make you cool.",
+    text: "Seasonal cocktails and aged spirits, shaken and stirred to order.",
   },
   {
     id: 3,
-    name: "Refreshment",
+    name: "Starters & Garden",
     image: refreshment,
-    text: "Fruit and icy refreshing drink to make feel refresh.",
+    text: "Seasonal small plates and garden-fresh starters to open the evening.",
   },
   {
     id: 4,
-    name: "Fasting foods",
+    name: "Chef's Tasting Menu",
     image: fastingFoods,
-    text: "Delicious Ethiopian fasting dishes made with simple, flavorful plant-based ingredients.",
+    text: "A multi-course journey through the chef's finest dishes, paired with wine.",
   },
   {
     id: 5,
-    name: "Non Fasting Foods",
+    name: "Prime Steaks & Chops",
     image: nonFastingFoods,
-    text: "Popular Ethiopian dishes featuring flavorful meat, rich spices, and traditional ingredients.",
+    text: "Dry-aged prime cuts, fire-seared and finished with classic sauces.",
   },
   {
     id: 6,
-    name: "Dessert",
+    name: "Pastry & Desserts",
     image: dessert,
-    text: "Satiate your palate and take you on a culinary treat.",
+    text: "Handcrafted pastries and plated desserts to end the evening.",
   },
 ];
 
