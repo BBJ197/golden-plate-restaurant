@@ -1501,3 +1501,16 @@ header.gp-header {
     width: calc(52% + 10px);
   }
 }
+
+/* hero mobile: whole picture +20px, side images kept on screen */
+@media (max-width: 860px) {
+  .gp-scene {
+    width: calc(min(60vw, 15rem) + 30px);
+  }
+  .gp-fx-fruit {
+    left: -24%;
+  }
+  .gp-fx-extra {
+    right: -24%;
+  }
+}
