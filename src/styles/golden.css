@@ -1430,3 +1430,17 @@ header.gp-header {
     linear-gradient(to bottom, transparent 80%, var(--bg)),
     radial-gradient(60% 65% at 68% 48%, #1c1c1c, transparent 75%), #0a0a0a;
 }
+
+/* hero mobile: keep salad and cake clear of the plate */
+@media (max-width: 860px) {
+  .gp-fx-fruit {
+    left: -14%;
+    bottom: 2%;
+    width: 38%;
+  }
+  .gp-fx-extra {
+    right: -15%;
+    top: -2%;
+    width: 44%;
+  }
+}
