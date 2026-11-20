@@ -1263,3 +1263,21 @@ header.gp-header {
     margin-inline: auto;
   }
 }
+
+/* about us: dark card so the gold heading shows, smaller mobile image */
+.gp .gp-story-card {
+  background: #1c1812;
+  border: 1px solid rgba(230, 184, 74, 0.35);
+}
+.gp .gp-story-text p:last-child {
+  color: #d8d2c4;
+}
+@media (max-width: 860px) {
+  .gp-story-img {
+    width: min(58%, 13rem);
+    margin: -1.5rem auto 0;
+  }
+  .gp-story-text {
+    text-align: center;
+  }
+}
