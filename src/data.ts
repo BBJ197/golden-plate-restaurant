@@ -9,48 +9,48 @@ import {
   faInstagram,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import hotBeverages from "./assets/images/hot-beveragrs.webp";
-import coldBeverages from "./assets/images/cold-beveragrs.webp";
-import refreshment from "./assets/images/refreshment.webp";
-import fastingFoods from "./assets/images/fasting-foods.webp";
-import nonFastingFoods from "./assets/images/non-fasting-foods.webp";
-import dessert from "./assets/images/dessert.webp";
+import wine from "./assets/images/wine.png";
+import cocktails from "./assets/images/Cocktails.png";
+import starter from "./assets/images/starter.png";
+import tastingMenu from "./assets/images/Tasting Menu.png";
+import steak from "./assets/images/stake.png";
+import cake from "./assets/images/cake.png";
 
 export const menuItems = [
   {
     id: 1,
     name: "Wine Cellar",
-    image: hotBeverages,
+    image: wine,
     text: "A curated list of rare vintages and sommelier-selected pours, by the glass or bottle.",
   },
   {
     id: 2,
     name: "Craft Cocktails",
-    image: coldBeverages,
+    image: cocktails,
     text: "Seasonal cocktails and aged spirits, shaken and stirred to order.",
   },
   {
     id: 3,
     name: "Starters & Garden",
-    image: refreshment,
+    image: starter,
     text: "Seasonal small plates and garden-fresh starters to open the evening.",
   },
   {
     id: 4,
     name: "Chef's Tasting Menu",
-    image: fastingFoods,
+    image: tastingMenu,
     text: "A multi-course journey through the chef's finest dishes, paired with wine.",
   },
   {
     id: 5,
     name: "Prime Steaks & Chops",
-    image: nonFastingFoods,
+    image: steak,
     text: "Dry-aged prime cuts, fire-seared and finished with classic sauces.",
   },
   {
     id: 6,
     name: "Pastry & Desserts",
-    image: dessert,
+    image: cake,
     text: "Handcrafted pastries and plated desserts to end the evening.",
   },
 ];
