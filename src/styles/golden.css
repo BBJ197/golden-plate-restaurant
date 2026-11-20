@@ -994,3 +994,300 @@ header.gp-header {
     justify-content: center;
   }
 }
+.gp-fx-extra {
+  right: -38%;
+  top: 22%;
+  width: 44%;
+}
+.gp .gp-title,
+.gp .gp-title * {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.gp .gp-title {
+  font-size: clamp(2.1rem, 4.4vw, 3.8rem);
+  line-height: 1.15;
+}
+.gp .gp-h2,
+.gp .gp-story-text h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.gp-gold,
+.gp .gp-title .gp-line > span,
+.gp .gp-kicker,
+.gp .gp-story-text h2,
+.gp .gp-h2 {
+  background: linear-gradient(
+    100deg,
+    #b8860b,
+    #f7e7b4,
+    #e6b84a,
+    #fff3c4,
+    #b8860b
+  );
+  background-size: 200% 100%;
+  background-repeat: repeat-x;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gp-shine 7s linear infinite;
+}
+.gp .gp-title .gp-line > span {
+  animation:
+    gp-rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both,
+    gp-shine 7s linear 0.8s infinite;
+}
+.gp .gp-btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid rgba(230, 184, 74, 0.7);
+  border-radius: 999px;
+  background: rgba(230, 184, 74, 0.08);
+  color: #f7e7b4;
+  backdrop-filter: blur(6px);
+}
+.gp .gp-btn:hover {
+  background: linear-gradient(100deg, #b8860b, #f7e7b4, #d4af37);
+  color: #141414;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.35);
+}
+.gp-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+.gp-hero-stage::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(
+      40% 40% at 25% 30%,
+      rgba(212, 175, 55, 0.22),
+      transparent 70%
+    ),
+    radial-gradient(
+      35% 35% at 75% 65%,
+      rgba(246, 226, 122, 0.16),
+      transparent 70%
+    ),
+    radial-gradient(
+      30% 30% at 60% 15%,
+      rgba(184, 134, 11, 0.18),
+      transparent 70%
+    );
+  filter: blur(30px);
+  pointer-events: none;
+  animation: gp-aurora 18s ease-in-out infinite alternate;
+}
+.gp-hero-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(246, 226, 122, 0.9) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 1px, transparent 2px);
+  background-size:
+    140px 140px,
+    220px 220px;
+  background-position:
+    0 0,
+    70px 90px;
+  opacity: 0.35;
+  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%);
+  pointer-events: none;
+  animation:
+    gp-drift 40s linear infinite,
+    gp-twinkle 5s ease-in-out infinite alternate;
+}
+@keyframes gp-shine {
+  to {
+    background-position: 200% 0;
+  }
+}
+@keyframes gp-aurora {
+  0% {
+    transform: translate3d(-4%, -3%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(5%, 4%, 0) scale(1.15);
+  }
+}
+@keyframes gp-drift {
+  to {
+    background-position:
+      0 -140px,
+      70px -130px;
+  }
+}
+@keyframes gp-twinkle {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+.gp-hero-stage::before {
+  inset: 0;
+  filter: none;
+  transform: none;
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent calc(50% - 0.5px),
+      rgba(212, 175, 55, 0.12) 50%,
+      transparent calc(50% + 0.5px)
+    ),
+    linear-gradient(
+      -45deg,
+      transparent calc(50% - 0.5px),
+      rgba(212, 175, 55, 0.12) 50%,
+      transparent calc(50% + 0.5px)
+    ),
+    linear-gradient(
+      115deg,
+      transparent 42%,
+      rgba(246, 226, 122, 0.1) 50%,
+      transparent 58%
+    );
+  background-size:
+    64px 64px,
+    64px 64px,
+    250% 100%;
+  background-repeat: repeat, repeat, no-repeat;
+  background-position:
+    0 0,
+    0 0,
+    0% 0;
+  mask-image: radial-gradient(ellipse at 65% 50%, #000 20%, transparent 78%);
+  animation: gp-lattice 14s linear infinite;
+}
+@keyframes gp-lattice {
+  to {
+    background-position:
+      64px 64px,
+      64px 64px,
+      100% 0;
+  }
+}
+.gp-hero-stage::before {
+  inset: auto;
+  left: 68%;
+  top: 48%;
+  width: 130vmin;
+  height: 130vmin;
+  translate: -50% -50%;
+  background: repeating-conic-gradient(
+    rgba(212, 175, 55, 0.2) 0 3deg,
+    transparent 3deg 12deg
+  );
+  mask-image: radial-gradient(circle, #000 12%, transparent 62%);
+  animation: gp-spin 80s linear infinite;
+}
+.gp-hero-stage::after {
+  background-image:
+    radial-gradient(circle, rgba(246, 226, 122, 1) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 1.5px, transparent 2.5px);
+}
+.gp-scene::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 155%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle,
+    transparent 0 30px,
+    rgba(230, 184, 74, 0.4) 30px 31px
+  );
+  mask-image: radial-gradient(circle, #000 30%, transparent 68%);
+  pointer-events: none;
+  animation: gp-ring 7s ease-in-out infinite alternate;
+}
+@keyframes gp-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes gp-ring {
+  from {
+    scale: 0.92;
+    opacity: 0.5;
+  }
+  to {
+    scale: 1.06;
+    opacity: 1;
+  }
+}
+@keyframes gp-twinkle {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+.gp-scene::before {
+  content: none;
+}
+.gp-hero-stage::before {
+  inset: 0;
+  width: auto;
+  height: auto;
+  translate: none;
+  rotate: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400' fill='none' stroke='rgb(212,175,55)' stroke-width='1.3'%3E%3Cpath d='M0 140C100 40 300 40 400 140S700 240 800 140' opacity='.3'/%3E%3Cpath d='M0 170C100 70 300 70 400 170S700 270 800 170' opacity='.4'/%3E%3Cpath d='M0 200C100 100 300 100 400 200S700 300 800 200' opacity='.55'/%3E%3Cpath d='M0 230C100 130 300 130 400 230S700 330 800 230' opacity='.4'/%3E%3Cpath d='M0 260C100 160 300 160 400 260S700 360 800 260' opacity='.3'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400' fill='none' stroke='rgb(212,175,55)' stroke-width='1.3'%3E%3Cpath d='M0 140C100 40 300 40 400 140S700 240 800 140' opacity='.3'/%3E%3Cpath d='M0 170C100 70 300 70 400 170S700 270 800 170' opacity='.4'/%3E%3Cpath d='M0 200C100 100 300 100 400 200S700 300 800 200' opacity='.55'/%3E%3Cpath d='M0 230C100 130 300 130 400 230S700 330 800 230' opacity='.4'/%3E%3Cpath d='M0 260C100 160 300 160 400 260S700 360 800 260' opacity='.3'/%3E%3C/svg%3E");
+  background-size:
+    1000px 500px,
+    1400px 700px;
+  background-repeat: repeat-x, repeat-x;
+  background-position:
+    0 50%,
+    0 25%;
+  mask-image: radial-gradient(ellipse at 55% 50%, #000 25%, transparent 85%);
+  animation: gp-waves 40s linear infinite;
+}
+@keyframes gp-waves {
+  to {
+    background-position:
+      1000px 50%,
+      -1400px 25%;
+  }
+}
+.gp-hero-stage::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.004 0.007' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.83 0 0 0 0 0.68 0 0 0 0 0.22 0 0 0 1.6 -0.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.004 0.007' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.83 0 0 0 0 0.68 0 0 0 0 0.22 0 0 0 1.6 -0.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:
+    900px 900px,
+    1400px 1400px;
+  background-repeat: repeat, repeat;
+  background-position:
+    0 0,
+    0 0;
+  opacity: 0.55;
+  filter: blur(6px);
+  mask-image: radial-gradient(ellipse at 60% 50%, #000 30%, transparent 85%);
+  animation: gp-smoke 120s linear infinite;
+}
+@keyframes gp-smoke {
+  to {
+    background-position:
+      900px 900px,
+      -1400px 1400px;
+  }
+}
+.gp-hero-stage::before {
+  content: none;
+}
