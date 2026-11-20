@@ -632,9 +632,9 @@ header.gp-header {
 .gp-sprinkle {
   position: absolute;
   left: 50%;
-  top: -14%;
+  top: 2%;
   z-index: 2;
-  width: 40%;
+  width: 62%;
   translate: -50% 0;
   pointer-events: none;
 }
