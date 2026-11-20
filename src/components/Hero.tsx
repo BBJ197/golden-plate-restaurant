@@ -3,7 +3,7 @@ import main from "../assets/images/central.png";
 import sause from "../assets/images/sause.png";
 import salt from "../assets/images/salt.png";
 import salad from "../assets/images/wooden.png";
-import extra from "../assets/images/refreshment.webp";
+import cake from "../assets/images/Strawberry chocolate cake.png";
 
 export default function Hero() {
   return (
@@ -51,7 +51,7 @@ export default function Hero() {
             />
             <img
               className="gp-fx gp-fx-extra"
-              src={extra}
+              src={cake}
               alt=""
               width="311"
               height="276"
