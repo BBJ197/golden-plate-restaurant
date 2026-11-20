@@ -12,7 +12,6 @@ import "@fontsource/noto-sans-ethiopic";
 import "./styles/index.css";
 import "./styles/ui-polish.css";
 import "./styles/home.css";
-import "./styles/hero-modern.css";
 import "./styles/menu-theme.css";
 import "./styles/menu-modern.css";
 import "./styles/menu-enter.css";
