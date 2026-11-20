@@ -1556,3 +1556,22 @@ header.gp-header {
     scale: 1.3;
   }
 }
+
+/* hero desktop: all hero images about 50px bigger */
+@media (min-width: 861px) {
+  .gp-scene {
+    width: calc(min(100%, 30rem, calc(76svh * 0.75)) + 50px);
+  }
+  .gp-fx-fruit {
+    width: calc(48% + 30px);
+  }
+  .gp-fx-extra {
+    width: calc(64% + 30px);
+  }
+  .gp-salt-b {
+    width: calc(38% + 30px);
+  }
+  .gp-sprinkle {
+    width: calc(62% + 30px);
+  }
+}
