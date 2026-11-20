@@ -1281,3 +1281,12 @@ header.gp-header {
     text-align: center;
   }
 }
+
+/* about us: keep the corner star fully on screen on mobile, and bigger */
+@media (max-width: 860px) {
+  .gp-fx-story {
+    right: 0.75rem;
+    bottom: -3rem;
+    width: 9rem;
+  }
+}
