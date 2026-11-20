@@ -1461,3 +1461,26 @@ header.gp-header {
     width: 56%;
   }
 }
+
+/* hero mobile: all images +10px, cake and salad moved off the plate */
+@media (max-width: 860px) {
+  .gp-scene {
+    width: calc(min(66vw, 17rem) + 10px);
+  }
+  .gp-fx-fruit {
+    left: -25%;
+    bottom: -4%;
+    width: calc(52% + 10px);
+  }
+  .gp-fx-extra {
+    right: -25%;
+    top: -12%;
+    width: calc(56% + 10px);
+  }
+  .gp-salt-b {
+    width: calc(34% + 10px);
+  }
+  .gp-sprinkle {
+    width: calc(62% + 10px);
+  }
+}
