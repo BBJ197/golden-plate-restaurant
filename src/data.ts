@@ -16,12 +16,6 @@ import fastingFoods from "./assets/images/fasting-foods.webp";
 import nonFastingFoods from "./assets/images/non-fasting-foods.webp";
 import dessert from "./assets/images/dessert.webp";
 
-import user1 from "./assets/images/User-1.jpeg";
-import user2 from "./assets/images/user-2.jpg";
-import user3 from "./assets/images/user-3.jpeg";
-import user4 from "./assets/images/user-4.jpg";
-import user5 from "./assets/images/user-5.webp";
-
 export const menuItems = [
   {
     id: 1,
@@ -58,42 +52,6 @@ export const menuItems = [
     name: "Dessert",
     image: dessert,
     text: "Satiate your palate and take you on a culinary treat.",
-  },
-];
-
-export const testimonials = [
-  {
-    id: 1,
-    name: "Eden Shemsu",
-    image: user1,
-    feedback:
-      "Loved the French roast. Perfectly balanced and rich. Will order again!",
-  },
-  {
-    id: 2,
-    name: "Yosef Bekele",
-    image: user2,
-    feedback:
-      "Great espresso blend! Smooth and bold flavor. Fast shipping too!",
-  },
-  {
-    id: 3,
-    name: "Michael Kidus",
-    image: user3,
-    feedback: "Fantastic mocha flavor. Fresh and aromatic. Quick shipping!",
-  },
-  {
-    id: 4,
-    name: "Sara Yohans",
-    image: user4,
-    feedback:
-      "Excellent quality! Fresh beans and quick delivery. Highly recommend.",
-  },
-  {
-    id: 5,
-    name: "Tariku Abebe",
-    image: user5,
-    feedback: "Best decaf I've tried! Smooth and flavorful. Arrived promptly.",
   },
 ];
 
