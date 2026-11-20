@@ -1409,3 +1409,10 @@ header.gp-header {
     right: -3%;
   }
 }
+
+/* hero: dark golden background */
+.gp-hero-stage {
+  background:
+    linear-gradient(to bottom, transparent 80%, var(--bg)),
+    radial-gradient(60% 65% at 68% 48%, #7a5614, transparent 75%), #2b1f08;
+}
