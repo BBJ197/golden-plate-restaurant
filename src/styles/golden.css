@@ -850,3 +850,12 @@ header.gp-header {
     grid-template-columns: 1fr;
   }
 }
+.gp-salt-b {
+  right: -24%;
+  bottom: -18%;
+  width: 42%;
+}
+.gp-motion .gp-salt-b {
+  transform: translate3d(calc(var(--p, 0) * 70px), calc(var(--p, 0) * 90px), 0)
+    rotate(calc(var(--p, 0) * 40deg));
+}
