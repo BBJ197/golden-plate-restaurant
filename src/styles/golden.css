@@ -878,3 +878,43 @@ header.gp-header {
     rotate: 3deg;
   }
 }
+.gp-grains i:nth-child(9) {
+  --j: -2.2cqw;
+  --dl: 0.1s;
+  --t: 1.7s;
+}
+.gp-grains i:nth-child(10) {
+  --j: -1.6cqw;
+  --dl: 0.3s;
+  --t: 1.5s;
+}
+.gp-grains i:nth-child(11) {
+  --j: -0.1cqw;
+  --dl: 0.5s;
+  --t: 1.9s;
+}
+.gp-grains i:nth-child(12) {
+  --j: 0.5cqw;
+  --dl: 0.7s;
+  --t: 1.6s;
+}
+.gp-grains i:nth-child(13) {
+  --j: 1.3cqw;
+  --dl: 0.9s;
+  --t: 2s;
+}
+.gp-grains i:nth-child(14) {
+  --j: 2.2cqw;
+  --dl: 1.1s;
+  --t: 1.7s;
+}
+.gp-grains i:nth-child(15) {
+  --j: -1cqw;
+  --dl: 1.3s;
+  --t: 1.8s;
+}
+.gp-grains i:nth-child(16) {
+  --j: 0cqw;
+  --dl: 1.5s;
+  --t: 1.5s;
+}
