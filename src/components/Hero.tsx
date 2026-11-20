@@ -3,6 +3,7 @@ import main from "../assets/images/central.png";
 import sause from "../assets/images/sause.png";
 import salt from "../assets/images/salt.png";
 import salad from "../assets/images/wooden.png";
+import extra from "../assets/images/refreshment.webp";
 
 export default function Hero() {
   return (
@@ -43,7 +44,14 @@ export default function Hero() {
             />
             <img
               className="gp-fx gp-fx-fruit"
-              src={sause}
+              src={salad}
+              alt=""
+              width="311"
+              height="276"
+            />
+            <img
+              className="gp-fx gp-fx-extra"
+              src={extra}
               alt=""
               width="311"
               height="276"
@@ -77,7 +85,7 @@ export default function Hero() {
             </div>
             <img
               className="gp-salt gp-salt-b"
-              src={salad}
+              src={sause}
               alt=""
               width="400"
               height="400"
