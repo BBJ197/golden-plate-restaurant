@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import pan from "../assets/images/central.png";
-import fruit from "../assets/images/sause.png";
-import cup from "../assets/images/salt.png";
+import main from "../assets/images/central.png";
+import sause from "../assets/images/sause.png";
+import salt from "../assets/images/salt.png";
+import salad from "../assets/images/wooden.png";
 
 export default function Hero() {
   return (
@@ -33,7 +34,7 @@ export default function Hero() {
           <div className="gp-scene">
             <img
               className="gp-pan"
-              src={pan}
+              src={main}
               alt="A cast-iron pan of freshly roasted coffee beans"
               width="820"
               height="960"
@@ -42,7 +43,7 @@ export default function Hero() {
             />
             <img
               className="gp-fx gp-fx-fruit"
-              src={fruit}
+              src={sause}
               alt=""
               width="311"
               height="276"
@@ -50,7 +51,7 @@ export default function Hero() {
             <div className="gp-sprinkle" aria-hidden="true">
               <img
                 className="gp-sprinkle-shaker"
-                src={cup}
+                src={salt}
                 alt=""
                 width="511"
                 height="382"
@@ -64,11 +65,19 @@ export default function Hero() {
                 <i />
                 <i />
                 <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
               </span>
             </div>
             <img
               className="gp-salt gp-salt-b"
-              src="/golden/salt.svg"
+              src={salad}
               alt=""
               width="400"
               height="400"
