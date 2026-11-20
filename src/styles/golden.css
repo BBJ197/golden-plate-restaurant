@@ -1484,3 +1484,20 @@ header.gp-header {
     width: calc(62% + 10px);
   }
 }
+
+/* hero mobile: salad up and left, cake down and right, plate a bit smaller */
+@media (max-width: 860px) {
+  .gp-scene {
+    width: calc(min(60vw, 15rem) + 10px);
+  }
+  .gp-fx-fruit {
+    left: -30%;
+    bottom: 2%;
+    width: calc(48% + 10px);
+  }
+  .gp-fx-extra {
+    right: -30%;
+    top: -8%;
+    width: calc(52% + 10px);
+  }
+}
