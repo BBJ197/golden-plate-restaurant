@@ -1361,3 +1361,31 @@ header.gp-header {
     width: 34%;
   }
 }
+
+/* hero: salad left, cake top right, sauce closer and lower */
+@media (min-width: 861px) {
+  .gp-fx-fruit {
+    left: -33%;
+  }
+  .gp-fx-extra {
+    right: -44%;
+    top: 8%;
+  }
+  .gp-salt-b {
+    right: -28%;
+    bottom: 0%;
+  }
+}
+@media (max-width: 860px) {
+  .gp-fx-fruit {
+    left: -13%;
+  }
+  .gp-fx-extra {
+    right: -18%;
+    top: 10%;
+  }
+  .gp-salt-b {
+    right: -8%;
+    bottom: -2%;
+  }
+}
