@@ -32,20 +32,6 @@ export default function Hero() {
           </div>
           <div className="gp-scene">
             <img
-              className="gp-salt gp-salt-a"
-              src=""
-              alt=""
-              width="400"
-              height="400"
-            />
-            <img
-              className="gp-fx gp-fx-sprig"
-              src=""
-              alt=""
-              width="120"
-              height="190"
-            />
-            <img
               className="gp-pan"
               src={pan}
               alt="A cast-iron pan of freshly roasted coffee beans"
@@ -61,13 +47,25 @@ export default function Hero() {
               width="311"
               height="276"
             />
-            <img
-              className="gp-fx gp-fx-cup"
-              src={cup}
-              alt=""
-              width="511"
-              height="382"
-            />
+            <div className="gp-sprinkle" aria-hidden="true">
+              <img
+                className="gp-sprinkle-shaker"
+                src={cup}
+                alt=""
+                width="511"
+                height="382"
+              />
+              <span className="gp-grains">
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+                <i />
+              </span>
+            </div>
             <img
               className="gp-salt gp-salt-b"
               src="/golden/salt.svg"
