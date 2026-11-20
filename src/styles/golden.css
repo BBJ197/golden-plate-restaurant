@@ -1604,3 +1604,22 @@ header.gp-header {
     scale: 1.25;
   }
 }
+
+/* hero desktop: back to the sizes from before the +50px change */
+@media (min-width: 861px) {
+  .gp-scene {
+    width: min(100%, 30rem, calc(76svh * 0.75));
+  }
+  .gp-fx-fruit {
+    width: 48%;
+  }
+  .gp-fx-extra {
+    width: 64%;
+  }
+  .gp-salt-b {
+    width: 38%;
+  }
+  .gp-sprinkle {
+    width: 62%;
+  }
+}
