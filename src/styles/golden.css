@@ -796,3 +796,10 @@ header.gp-header {
     )
     rotate(calc(var(--p, 0) * 60deg));
 }
+.gp-salt-b {
+  bottom: -28%;
+}
+.gp-motion .gp-salt-b {
+  transform: translate3d(calc(var(--p, 0) * 60px), calc(var(--p, 0) * 70px), 0)
+    rotate(calc(var(--p, 0) * 40deg));
+}
