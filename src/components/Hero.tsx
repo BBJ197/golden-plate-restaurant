@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import pan from "../assets/images/menu-background.webp";
-import fruit from "../assets/images/refreshment.webp";
-import cup from "../assets/images/hot-beveragrs.webp";
+import pan from "../assets/images/central.png";
+import fruit from "../assets/images/sause.png";
+import cup from "../assets/images/salt.png";
 
 export default function Hero() {
   return (
@@ -33,14 +33,14 @@ export default function Hero() {
           <div className="gp-scene">
             <img
               className="gp-salt gp-salt-a"
-              src="/golden/salt.svg"
+              src=""
               alt=""
               width="400"
               height="400"
             />
             <img
               className="gp-fx gp-fx-sprig"
-              src="/golden/sprig.svg"
+              src=""
               alt=""
               width="120"
               height="190"
