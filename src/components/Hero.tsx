@@ -45,7 +45,7 @@ export default function Hero() {
             <img
               className="gp-fx gp-fx-fruit"
               src={salad}
-              alt=""
+              alt="A wooden bowl of salad"
               width="311"
               height="276"
             />
