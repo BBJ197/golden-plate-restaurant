@@ -1514,3 +1514,35 @@ header.gp-header {
     right: -24%;
   }
 }
+
+/* hero mobile: stronger scroll motion so it is visible on small screens */
+@media (max-width: 860px) {
+  .gp-motion .gp-pan {
+    transform: rotateX(calc(var(--p, 0) * 40deg))
+      rotate(calc(var(--p, 0) * 80deg)) scale(calc(1 + var(--p, 0) * 0.25));
+  }
+  .gp-motion .gp-fx-fruit {
+    transform: translate3d(
+        calc(var(--p, 0) * -90px),
+        calc(var(--p, 0) * 140px),
+        0
+      )
+      rotate(calc(var(--p, 0) * -120deg));
+  }
+  .gp-motion .gp-fx-extra {
+    transform: translate3d(
+        calc(var(--p, 0) * 110px),
+        calc(var(--p, 0) * -140px),
+        0
+      )
+      rotate(calc(var(--p, 0) * 90deg));
+  }
+  .gp-motion .gp-salt-b {
+    transform: translate3d(
+        calc(var(--p, 0) * 90px),
+        calc(var(--p, 0) * 150px),
+        0
+      )
+      rotate(calc(var(--p, 0) * 90deg));
+  }
+}
