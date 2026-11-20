@@ -1,5 +1,6 @@
 import aboutImg from "../assets/images/About us.jpg";
 import stars from "../assets/images/5 star.png";
+import wideFood from "../assets/images/about img 2.png";
 
 export default function About() {
   return (
@@ -7,7 +8,7 @@ export default function About() {
       <div className="gp-story-tilt">
         <img
           className="gp-salt gp-salt-story"
-          src="/golden/salt.svg"
+          src={wideFood}
           alt=""
           width="400"
           height="400"
