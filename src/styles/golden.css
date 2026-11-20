@@ -631,7 +631,7 @@ header.gp-header {
 
 .gp-sprinkle {
   --sx: 45%;
-  --sy: 50%;
+  --sy: 34%;
   --ex: 30%;
   --ey: 112%;
   position: absolute;
@@ -758,4 +758,11 @@ header.gp-header {
     opacity: 1;
     scale: 1;
   }
+}
+.gp-sprinkle-shaker {
+  position: relative;
+  z-index: 1;
+}
+.gp-grains {
+  z-index: 0;
 }
