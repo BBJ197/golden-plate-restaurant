@@ -962,3 +962,9 @@ header.gp-header {
     top: var(--ey);
   }
 }
+.gp-sprinkle {
+  --ey: 100%;
+}
+.gp-sprinkle-shaker {
+  animation-duration: 3.4s;
+}
