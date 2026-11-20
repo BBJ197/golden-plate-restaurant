@@ -1416,3 +1416,10 @@ header.gp-header {
     linear-gradient(to bottom, transparent 80%, var(--bg)),
     radial-gradient(60% 65% at 68% 48%, #7a5614, transparent 75%), #2b1f08;
 }
+
+/* hero: black background with a touch of brown */
+.gp-hero-stage {
+  background:
+    linear-gradient(to bottom, transparent 80%, var(--bg)),
+    radial-gradient(60% 65% at 68% 48%, #34231a, transparent 75%), #0d0a08;
+}
