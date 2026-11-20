@@ -1299,3 +1299,39 @@ header.gp-header {
     width: 12rem;
   }
 }
+
+/* hero: bigger side images, sauce moved up */
+@media (min-width: 861px) {
+  .gp-fx-fruit {
+    left: -28%;
+    bottom: 6%;
+    width: 48%;
+  }
+  .gp-fx-extra {
+    right: -34%;
+    top: 20%;
+    width: 52%;
+  }
+  .gp-salt-b {
+    right: -22%;
+    bottom: 8%;
+    width: 52%;
+  }
+}
+@media (max-width: 860px) {
+  .gp-fx-fruit {
+    left: -10%;
+    bottom: 6%;
+    width: 44%;
+  }
+  .gp-fx-extra {
+    right: -10%;
+    top: 22%;
+    width: 46%;
+  }
+  .gp-salt-b {
+    right: -6%;
+    bottom: 4%;
+    width: 46%;
+  }
+}
