@@ -982,3 +982,137 @@ header.gp-header {
   top: 22%;
   width: 44%;
 }
+.gp .gp-title,
+.gp .gp-title * {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.gp .gp-title {
+  font-size: clamp(2.1rem, 4.4vw, 3.8rem);
+  line-height: 1.15;
+}
+.gp .gp-h2,
+.gp .gp-story-text h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.gp-gold,
+.gp .gp-title .gp-line > span,
+.gp .gp-kicker,
+.gp .gp-story-text h2,
+.gp .gp-h2 {
+  background: linear-gradient(
+    100deg,
+    #b8860b,
+    #f7e7b4,
+    #e6b84a,
+    #fff3c4,
+    #b8860b
+  );
+  background-size: 200% 100%;
+  background-repeat: repeat-x;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gp-shine 7s linear infinite;
+}
+.gp .gp-title .gp-line > span {
+  animation:
+    gp-rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both,
+    gp-shine 7s linear 0.8s infinite;
+}
+.gp .gp-btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid rgba(230, 184, 74, 0.7);
+  border-radius: 999px;
+  background: rgba(230, 184, 74, 0.08);
+  color: #f7e7b4;
+  backdrop-filter: blur(6px);
+}
+.gp .gp-btn:hover {
+  background: linear-gradient(100deg, #b8860b, #f7e7b4, #d4af37);
+  color: #141414;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.35);
+}
+.gp-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+.gp-hero-stage::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(
+      40% 40% at 25% 30%,
+      rgba(212, 175, 55, 0.22),
+      transparent 70%
+    ),
+    radial-gradient(
+      35% 35% at 75% 65%,
+      rgba(246, 226, 122, 0.16),
+      transparent 70%
+    ),
+    radial-gradient(
+      30% 30% at 60% 15%,
+      rgba(184, 134, 11, 0.18),
+      transparent 70%
+    );
+  filter: blur(30px);
+  pointer-events: none;
+  animation: gp-aurora 18s ease-in-out infinite alternate;
+}
+.gp-hero-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(246, 226, 122, 0.9) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 1px, transparent 2px);
+  background-size:
+    140px 140px,
+    220px 220px;
+  background-position:
+    0 0,
+    70px 90px;
+  opacity: 0.35;
+  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%);
+  pointer-events: none;
+  animation:
+    gp-drift 40s linear infinite,
+    gp-twinkle 5s ease-in-out infinite alternate;
+}
+@keyframes gp-shine {
+  to {
+    background-position: 200% 0;
+  }
+}
+@keyframes gp-aurora {
+  0% {
+    transform: translate3d(-4%, -3%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(5%, 4%, 0) scale(1.15);
+  }
+}
+@keyframes gp-drift {
+  to {
+    background-position:
+      0 -140px,
+      70px -130px;
+  }
+}
+@keyframes gp-twinkle {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
