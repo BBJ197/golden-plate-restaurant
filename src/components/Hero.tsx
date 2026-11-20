@@ -35,7 +35,7 @@ export default function Hero() {
               className="gp-pan"
               src={pan}
               alt="A cast-iron pan of freshly roasted coffee beans"
-              width="720"
+              width="820"
               height="960"
               fetchPriority="high"
               decoding="async"
