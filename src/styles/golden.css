@@ -1290,3 +1290,12 @@ header.gp-header {
     width: 9rem;
   }
 }
+
+/* about us: bigger corner star on desktop */
+@media (min-width: 861px) {
+  .gp-fx-story {
+    right: -1rem;
+    bottom: -4rem;
+    width: 12rem;
+  }
+}
