@@ -1274,7 +1274,7 @@ header.gp-header {
 }
 @media (max-width: 860px) {
   .gp-story-img {
-    width: min(58%, 13rem);
+    width: min(66%, 15rem);
     margin: -1.5rem auto 0;
   }
   .gp-story-text {
