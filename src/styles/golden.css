@@ -859,3 +859,22 @@ header.gp-header {
   transform: translate3d(calc(var(--p, 0) * 70px), calc(var(--p, 0) * 90px), 0)
     rotate(calc(var(--p, 0) * 40deg));
 }
+.gp-grains {
+  display: block;
+}
+.gp-sprinkle-shaker {
+  animation: none;
+}
+.gp-sprinkle {
+  transform-origin: 80% 15%;
+  animation: gp-tilt 4s ease-in-out infinite;
+}
+@keyframes gp-tilt {
+  0%,
+  100% {
+    rotate: -2deg;
+  }
+  50% {
+    rotate: 3deg;
+  }
+}
