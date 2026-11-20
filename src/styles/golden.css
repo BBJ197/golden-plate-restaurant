@@ -1592,3 +1592,15 @@ header.gp-header {
 .gp-dish:nth-child(even) .gp-dish-art {
   order: 0;
 }
+
+/* home menu: bigger steak and starter photos to match the others */
+.gp-dish-3 .gp-dish-art img,
+.gp-dish-5 .gp-dish-art img {
+  scale: 1.4;
+}
+@media (max-width: 860px) {
+  .gp-dish-3 .gp-dish-art img,
+  .gp-dish-5 .gp-dish-art img {
+    scale: 1.25;
+  }
+}
