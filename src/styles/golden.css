@@ -1587,3 +1587,8 @@ header.gp-header {
     translate: -2rem 0;
   }
 }
+
+/* home menu: all photos on the left, all text on the right */
+.gp-dish:nth-child(even) .gp-dish-art {
+  order: 0;
+}
