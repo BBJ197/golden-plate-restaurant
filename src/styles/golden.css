@@ -1575,3 +1575,15 @@ header.gp-header {
     width: calc(62% + 30px);
   }
 }
+
+/* hero desktop: text a little to the left */
+@media (min-width: 861px) {
+  .gp-hero-copy {
+    translate: -1rem 0;
+  }
+}
+@media (min-width: 1200px) {
+  .gp-hero-copy {
+    translate: -2rem 0;
+  }
+}
