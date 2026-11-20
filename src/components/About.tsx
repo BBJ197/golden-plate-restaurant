@@ -1,4 +1,5 @@
 import aboutImg from "../assets/images/About us.jpg";
+import stars from "../assets/images/5 star.png";
 
 export default function About() {
   return (
@@ -37,7 +38,7 @@ export default function About() {
         </div>
         <img
           className="gp-fx-story"
-          src="/golden/sprig.svg"
+          src={stars}
           alt=""
           width="120"
           height="190"
