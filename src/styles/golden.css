@@ -784,3 +784,15 @@ header.gp-header {
     translate: 0.6cqw 0.8cqw;
   }
 }
+.gp-salt-b {
+  bottom: -16%;
+  rotate: 230deg;
+}
+.gp-motion .gp-salt-b {
+  transform: translate3d(
+      calc(var(--p, 0) * 80px),
+      calc(var(--p, 0) * -110px),
+      0
+    )
+    rotate(calc(var(--p, 0) * 60deg));
+}
