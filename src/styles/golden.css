@@ -1291,3 +1291,9 @@ header.gp-header {
 .gp-hero-stage::before {
   content: none;
 }
+@media (max-width: 860px) {
+  .gp-hero-copy {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
