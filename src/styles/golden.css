@@ -1794,3 +1794,21 @@ header.gp-header {
     168px 168px;
   background-repeat: repeat;
 }
+
+/* /menu page: pitch black with clear yellow-gold patterns */
+.menu-page {
+  background-color: #000;
+  background-image:
+    radial-gradient(circle, rgba(250, 205, 70, 0.55) 1.3px, transparent 1.8px),
+    radial-gradient(circle, rgba(250, 205, 70, 0.3) 1px, transparent 1.5px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='168' height='168'%3E%3Cg fill='none' stroke='rgb(250,205,70)' stroke-opacity='0.2' stroke-width='1.1'%3E%3Cpath d='M84 8L160 84L84 160L8 84Z'/%3E%3Cpath d='M84 40L128 84L84 128L40 84Z'/%3E%3C/g%3E%3Cpath fill='rgb(250,205,70)' fill-opacity='0.35' d='M84 74L87 81L94 84L87 87L84 94L81 87L74 84L81 81Z'/%3E%3C/svg%3E");
+  background-position:
+    0 0,
+    42px 42px,
+    0 0;
+  background-size:
+    84px 84px,
+    84px 84px,
+    168px 168px;
+  background-repeat: repeat;
+}
