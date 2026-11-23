@@ -587,3 +587,105 @@
     transition: none;
   }
 }
+
+/* Golden Plate: realistic wine background */
+.menu-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  background-color: #170408;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(10, 2, 5, 0.58) 0%,
+      rgba(10, 2, 5, 0.22) 58%,
+      rgba(10, 2, 5, 0.04) 100%
+    ),
+    url("/assets/images/menu%20background.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Soft cinematic light movement */
+.menu-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse at 77% 38%,
+    rgba(170, 14, 37, 0.13),
+    transparent 32%
+  );
+  animation: wine-light-breathe 4s ease-in-out infinite;
+}
+
+/* Animated wine-stream highlights */
+.menu-page::after {
+  content: "";
+  position: absolute;
+  top: 13%;
+  right: 22%;
+  width: 2.2%;
+  height: 27%;
+  pointer-events: none;
+  z-index: -1;
+  transform: rotate(23deg);
+  transform-origin: top center;
+  border-radius: 50%;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    rgba(255, 105, 115, 0) 8px,
+    rgba(255, 125, 135, 0.45) 13px,
+    transparent 25px
+  );
+  background-size: 100% 120px;
+  filter: blur(4px);
+  mix-blend-mode: screen;
+  animation: wine-flow-down 0.8s linear infinite;
+}
+
+@keyframes wine-flow-down {
+  from {
+    background-position-y: 0;
+  }
+  to {
+    background-position-y: 120px;
+  }
+}
+
+@keyframes wine-light-breathe {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* Keep original image and wine level fixed */
+.menu-page {
+  animation: none;
+}
+
+@media (max-width: 768px) {
+  .menu-page {
+    background-attachment: scroll;
+    background-position: 70% center;
+  }
+  .menu-page::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-page::before,
+  .menu-page::after {
+    animation: none;
+  }
+}
