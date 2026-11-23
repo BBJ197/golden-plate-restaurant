@@ -28,10 +28,10 @@
   -webkit-mask-image: linear-gradient(
     to bottom,
     #000 0,
-    #000 36%,
-    transparent 50%
+    #000 22%,
+    transparent 36%
   );
-  mask-image: linear-gradient(to bottom, #000 0, #000 36%, transparent 50%);
+  mask-image: linear-gradient(to bottom, #000 0, #000 22%, transparent 36%);
   transform-origin: 50% 48%;
 }
 .menu-pans::after {
