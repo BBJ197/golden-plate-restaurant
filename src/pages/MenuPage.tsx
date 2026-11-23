@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import type { Menu, MenuItem } from "../api/menu";
 import { useMenu } from "../api/useMenu";
@@ -90,7 +90,7 @@ function ItemCard({
         )}
         {!item.isAvailable && (
           <p className="menu-unavailable">
-            {pickText("Unavailable", "አይገኝም", lang)}
+            {pickText("Unavailable", "áŠ á‹­áŒˆáŠáˆ", lang)}
           </p>
         )}
         {!photo && price}
@@ -193,7 +193,7 @@ export default function MenuPage() {
               <g className="mw-stream">
                 <path
                   className="mw-stream-body"
-                  d="M0 0C12 22 20 150 20 235"
+                  d="M0 0 C3 30 8 68 13 112 S21 197 20 235"
                   fill="none"
                   stroke="#8f1627"
                   strokeWidth="9"
@@ -201,9 +201,9 @@ export default function MenuPage() {
                 />
                 <path
                   className="mw-stream-flow"
-                  d="M0 0C12 22 20 150 20 235"
+                  d="M0 0 C3 30 8 68 13 112 S21 197 20 235"
                   fill="none"
-                  stroke="rgba(255,170,180,0.35)"
+                  stroke="rgba(255,195,205,0.55)"
                   strokeWidth="3"
                   strokeLinecap="round"
                 />
@@ -246,7 +246,7 @@ export default function MenuPage() {
             >
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
-            {pickText("Back to home", "ወደ መነሻ ተመለስ", lang)}
+            {pickText("Back to home", "á‹ˆá‹° áˆ˜áŠáˆ» á‰°áˆ˜áˆˆáˆµ", lang)}
           </Link>
           <div className="menu-lang" role="group" aria-label="Language">
             <button
@@ -274,18 +274,18 @@ export default function MenuPage() {
         <div className="menu-banner-text">
           <p className="menu-eyebrow">
             {pickText(
-              "Traditional taste • Freshly brewed",
-              "ባህላዊ ጣዕም • ትኩስ ቡናቡና",
+              "Traditional taste â€¢ Freshly brewed",
+              "á‰£áˆ…áˆ‹á‹Š áŒ£á‹•áˆ â€¢ á‰µáŠ©áˆµ á‰¡áŠ“á‰¡áŠ“",
               lang,
             )}
           </p>
           <h1 id="menu-title">
-            {pickText("Our Menu", "የእኛ የምግብ ዝርዝሮች", lang)}
+            {pickText("Our Menu", "á‹¨áŠ¥áŠ› á‹¨áˆáŒá‰¥ á‹áˆ­á‹áˆ®á‰½", lang)}
           </h1>
           <p className="menu-banner-sub">
             {pickText(
               "Authentic Ethiopian flavors, crafted with love.",
-              "እውነተኛ የኢትዮጵያ ጣዕም፣ በፍቅር የተዘጋጀ።",
+              "áŠ¥á‹áŠá‰°áŠ› á‹¨áŠ¢á‰µá‹®áŒµá‹« áŒ£á‹•áˆá£ á‰ áá‰…áˆ­ á‹¨á‰°á‹˜áŒ‹áŒ€á¢",
               lang,
             )}
           </p>
@@ -299,7 +299,7 @@ export default function MenuPage() {
           <p>
             {pickText(
               "We could not load the menu. Please check your connection and try again.",
-              "ምናሌውን መጫን አልተቻለም። እባክዎ ግንኙነትዎን ይፈትሹ እና እንደገና ይሞክሩ።",
+              "áˆáŠ“áˆŒá‹áŠ• áˆ˜áŒ«áŠ• áŠ áˆá‰°á‰»áˆˆáˆá¢ áŠ¥á‰£áŠ­á‹Ž áŒáŠ•áŠ™áŠá‰µá‹ŽáŠ• á‹­áˆá‰µáˆ¹ áŠ¥áŠ“ áŠ¥áŠ•á‹°áŒˆáŠ“ á‹­áˆžáŠ­áˆ©á¢",
               lang,
             )}
           </p>
@@ -309,7 +309,7 @@ export default function MenuPage() {
             onClick={() => void refetch()}
             disabled={isFetching}
           >
-            {pickText("Try again", "እንደገና ሞክር", lang)}
+            {pickText("Try again", "áŠ¥áŠ•á‹°áŒˆáŠ“ áˆžáŠ­áˆ­", lang)}
           </button>
         </div>
       )}
@@ -318,7 +318,7 @@ export default function MenuPage() {
         <p>
           {pickText(
             "The menu is empty right now. Please check back soon.",
-            "ምናሌው አሁን ባዶ ነው። እባክዎ በቅርቡ ይመለሱ።",
+            "áˆáŠ“áˆŒá‹ áŠ áˆáŠ• á‰£á‹¶ áŠá‹á¢ áŠ¥á‰£áŠ­á‹Ž á‰ á‰…áˆ­á‰¡ á‹­áˆ˜áˆˆáˆ±á¢",
             lang,
           )}
         </p>
@@ -332,7 +332,7 @@ export default function MenuPage() {
                 <MenuIcon name="search" size={20} />
               </span>
               <label htmlFor="menu-search" className="menu-search-label">
-                {pickText("Search the menu", "ምናሌውን ፈልግ", lang)}
+                {pickText("Search the menu", "áˆáŠ“áˆŒá‹áŠ• áˆáˆáŒ", lang)}
               </label>
               <input
                 id="menu-search"
@@ -340,7 +340,7 @@ export default function MenuPage() {
                 className="menu-search"
                 placeholder={pickText(
                   "Search by name, description or category",
-                  "በስም፣ በመግለጫ ወይም በምድብ ፈልግ",
+                  "á‰ áˆµáˆá£ á‰ áˆ˜áŒáˆˆáŒ« á‹ˆá‹­áˆ á‰ áˆá‹µá‰¥ áˆáˆáŒ",
                   lang,
                 )}
                 value={filters.query}
@@ -352,7 +352,7 @@ export default function MenuPage() {
             <details className="menu-filter-panel">
               <summary className="menu-filter-toggle">
                 <MenuIcon name="grid" size={18} />
-                {pickText("Filters", "ማጣሪያ", lang)}
+                {pickText("Filters", "áˆ›áŒ£áˆªá‹«", lang)}
                 {filters.tagSlugs.length > 0 && (
                   <span className="menu-filter-count">
                     {filters.tagSlugs.length}
@@ -367,12 +367,12 @@ export default function MenuPage() {
                 <button
                   type="button"
                   className="menu-chip"
-                  aria-label={pickText("Any diet", "ሁሉም አይነት", lang)}
+                  aria-label={pickText("Any diet", "áˆáˆ‰áˆ áŠ á‹­áŠá‰µ", lang)}
                   aria-pressed={filters.tagSlugs.length === 0}
                   onClick={() => setFilters((f) => ({ ...f, tagSlugs: [] }))}
                 >
                   <MenuIcon name="grid" size={16} />
-                  {pickText("Any diet", "ሁሉም አይነት", lang)}
+                  {pickText("Any diet", "áˆáˆ‰áˆ áŠ á‹­áŠá‰µ", lang)}
                 </button>
                 {data.tags.map((tag) => {
                   const icon = iconForTag(tag.slug);
@@ -402,7 +402,7 @@ export default function MenuPage() {
                 onClick={() => setFilters((f) => ({ ...f, categoryId: null }))}
               >
                 <MenuIcon name="grid" size={16} />
-                {pickText("All", "ሁሉም", lang)}
+                {pickText("All", "áˆáˆ‰áˆ", lang)}
               </button>
               {data.categories.map((category) => (
                 <button
@@ -424,7 +424,7 @@ export default function MenuPage() {
           <div className="menu-summary">
             <p role="status">
               {lang === "am"
-                ? `${visible.length} ንጥል`
+                ? `${visible.length} áŠ•áŒ¥áˆ`
                 : `${visible.length} ${visible.length === 1 ? "item" : "items"}`}
             </p>
             {active && (
@@ -433,7 +433,7 @@ export default function MenuPage() {
                 className="menu-button"
                 onClick={() => setFilters(emptyFilters)}
               >
-                {pickText("Clear filters", "ማጣሪያ አጽዳ", lang)}
+                {pickText("Clear filters", "áˆ›áŒ£áˆªá‹« áŠ áŒ½á‹³", lang)}
               </button>
             )}
           </div>
@@ -442,7 +442,7 @@ export default function MenuPage() {
             <p className="menu-empty">
               {pickText(
                 "No items match. Try different words or clear the filters.",
-                "ምንም አልተገኘም። ሌሎች ቃላትን ይሞክሩ ወይም ማጣሪያዎቹን ያጽዱ።",
+                "áˆáŠ•áˆ áŠ áˆá‰°áŒˆáŠ˜áˆá¢ áˆŒáˆŽá‰½ á‰ƒáˆ‹á‰µáŠ• á‹­áˆžáŠ­áˆ© á‹ˆá‹­áˆ áˆ›áŒ£áˆªá‹«á‹Žá‰¹áŠ• á‹«áŒ½á‹±á¢",
                 lang,
               )}
             </p>
@@ -454,12 +454,12 @@ export default function MenuPage() {
                 <MenuIcon name="star" size={28} />
                 <div>
                   <h2 id="popular-heading">
-                    {pickText("Popular", "ተወዳጅ", lang)}
+                    {pickText("Popular", "á‰°á‹ˆá‹³áŒ…", lang)}
                   </h2>
                   <p className="menu-section-sub">
                     {pickText(
                       "Our most loved items",
-                      "በጣም የተወደዱ ምርጫዎቻችን",
+                      "á‰ áŒ£áˆ á‹¨á‰°á‹ˆá‹°á‹± áˆáˆ­áŒ«á‹Žá‰»á‰½áŠ•",
                       lang,
                     )}
                   </p>
