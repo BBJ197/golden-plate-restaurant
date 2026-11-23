@@ -244,7 +244,6 @@ export default function MenuPage() {
             </div>
             <details className="menu-filter-panel">
               <summary className="menu-filter-toggle">
-                <MenuIcon name="grid" size={18} />
                 {pickText("Filters", "ማጣሪያ", lang)}
                 {filters.tagSlugs.length > 0 && (
                   <span className="menu-filter-count">
@@ -264,11 +263,9 @@ export default function MenuPage() {
                   aria-pressed={filters.tagSlugs.length === 0}
                   onClick={() => setFilters((f) => ({ ...f, tagSlugs: [] }))}
                 >
-                  <MenuIcon name="grid" size={16} />
                   {pickText("Any diet", "ሁሉም አይነት", lang)}
                 </button>
                 {data.tags.map((tag) => {
-                  const icon = iconForTag(tag.slug);
                   return (
                     <button
                       key={tag.id}
@@ -277,7 +274,6 @@ export default function MenuPage() {
                       aria-pressed={filters.tagSlugs.includes(tag.slug)}
                       onClick={() => toggleTag(tag.slug)}
                     >
-                      {icon && <MenuIcon name={icon} size={16} />}
                       {pickText(tag.nameEn, tag.nameAm, lang)}
                     </button>
                   );
@@ -294,7 +290,6 @@ export default function MenuPage() {
                 aria-pressed={filters.categoryId === null}
                 onClick={() => setFilters((f) => ({ ...f, categoryId: null }))}
               >
-                <MenuIcon name="grid" size={16} />
                 {pickText("All", "ሁሉም", lang)}
               </button>
               {data.categories.map((category) => (
@@ -307,7 +302,6 @@ export default function MenuPage() {
                     setFilters((f) => ({ ...f, categoryId: category.id }))
                   }
                 >
-                  <MenuIcon name={iconForCategory(category.nameEn)} size={16} />
                   {pickText(category.nameEn, category.nameAm, lang)}
                 </button>
               ))}
