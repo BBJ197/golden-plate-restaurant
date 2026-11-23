@@ -45,15 +45,20 @@ async function withApi(fn: (ctx: Ctx) => Promise<void>) {
     const category = await client.query(
       "insert into categories (name_en) values ('TX items category') returning id",
     );
+    // The test makes its own tags (rolled back with everything else), so it
+    // does not depend on which tags exist in the database it runs against.
     const tags = await client.query(
-      "select id, slug from tags where slug in ('hot', 'fasting')",
+      `insert into tags (slug, group_key, name_en, sort_order) values
+         ('tx-hot', 'temperature', 'TX Hot', 900),
+         ('tx-fasting', 'fasting', 'TX Fasting', 901)
+       returning id, slug`,
     );
+    const idOf = (slug: string) =>
+      tags.rows.find((r) => r.slug === slug)?.id as string;
     await fn({
       send,
       categoryId: category.rows[0].id as string,
-      tag: Object.fromEntries(
-        tags.rows.map((r) => [r.slug as string, r.id as string]),
-      ),
+      tag: { hot: idOf("tx-hot"), fasting: idOf("tx-fasting") },
     });
   } finally {
     await client.query("rollback");
