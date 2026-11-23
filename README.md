@@ -36,17 +36,18 @@ npm run dev               # site on http://localhost:5173
 
 ## Environment variables
 
-| Variable             | Where            | Purpose                                                                            |
-| -------------------- | ---------------- | ---------------------------------------------------------------------------------- |
-| `VITE_API_URL`       | frontend         | Leave unset in production (the site calls `/api` on its own address).              |
-| `API_ORIGIN`         | Cloudflare Pages | The Render API address that `/api/*` is forwarded to.                              |
-| `DATABASE_URL`       | api              | PostgreSQL connection string. Required.                                            |
-| `PORT`               | api              | API port. Default `3001`.                                                          |
-| `CORS_ORIGIN`        | api              | The exact URL of the deployed website. **Set this in production.**                 |
-| `NODE_ENV`           | api              | Set to `production` so the session cookie is marked secure. **Set in production.** |
-| `RESEND_API_KEY`     | api              | Optional. Emails contact-form messages to the owner.                               |
-| `CONTACT_TO_EMAIL`   | api              | Optional. Who receives those emails.                                               |
-| `CONTACT_FROM_EMAIL` | api              | Optional. Sender address.                                                          |
+| Variable             | Where                  | Purpose                                                                                                                                                                    |
+| -------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `VITE_API_URL`       | frontend               | Leave unset in production (the site calls `/api` on its own address).                                                                                                      |
+| `API_ORIGIN`         | Cloudflare Pages       | The Render API address that `/api/*` is forwarded to.                                                                                                                      |
+| `DATABASE_URL`       | api                    | PostgreSQL connection string. Required.                                                                                                                                    |
+| `PORT`               | api                    | API port. Default `3001`.                                                                                                                                                  |
+| `CORS_ORIGIN`        | api                    | The exact URL of the deployed website. **Set this in production.**                                                                                                         |
+| `NODE_ENV`           | api                    | Set to `production` so the session cookie is marked secure. **Set in production.**                                                                                         |
+| `PROXY_SECRET`       | api + Cloudflare Pages | Optional, 16+ random characters. Set the **same value** in both places so the API can trust the visitor IP the proxy forwards (used by the login and contact rate limits). |
+| `RESEND_API_KEY`     | api                    | Optional. Emails contact-form messages to the owner.                                                                                                                       |
+| `CONTACT_TO_EMAIL`   | api                    | Optional. Who receives those emails.                                                                                                                                       |
+| `CONTACT_FROM_EMAIL` | api                    | Optional. Sender address.                                                                                                                                                  |
 
 Never commit `.env` files. They are git-ignored; only the `.env.example` files are tracked.
 

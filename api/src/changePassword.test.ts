@@ -9,7 +9,7 @@ const ORIGIN = "http://localhost:5173";
 const OLD = "the-old-password-1";
 const NEW = "a-brand-new-password";
 const WRONG = "wrong-password-xx";
-const TOKEN = /alemitu_session=([^;]+)/;
+const TOKEN = /golden_plate_session=([^;]+)/;
 
 async function setup() {
   const state = { hash: await hashPassword(OLD) };
@@ -54,7 +54,7 @@ async function setup() {
     });
   const signIn = async () => {
     const res = await login(OLD);
-    return `alemitu_session=${TOKEN.exec(res.headers.get("set-cookie") ?? "")?.[1]}`;
+    return `golden_plate_session=${TOKEN.exec(res.headers.get("set-cookie") ?? "")?.[1]}`;
   };
   const change = (
     cookie: string,

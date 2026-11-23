@@ -8,6 +8,7 @@ const config = loadConfig();
 const app = createApp(createPool(config.DATABASE_URL), {
   corsOrigin: config.CORS_ORIGIN,
   secureCookies: process.env.NODE_ENV === "production",
+  proxySecret: config.PROXY_SECRET,
   notify: createNotifier(
     config.RESEND_API_KEY && config.CONTACT_TO_EMAIL
       ? {

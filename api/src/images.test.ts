@@ -34,7 +34,7 @@ function setup(
       headers: {
         "content-type": "image/webp",
         origin: ORIGIN,
-        cookie: "alemitu_session=test",
+        cookie: "golden_plate_session=test",
         ...headers,
       },
       body: body as BodyInit,

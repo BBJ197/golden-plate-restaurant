@@ -3,7 +3,7 @@ import type { Context, MiddlewareHandler } from "hono";
 import { deleteCookie, getCookie, setCookie } from "hono/cookie";
 import type { Db } from "./db";
 
-export const SESSION_COOKIE = "alemitu_session";
+export const SESSION_COOKIE = "golden_plate_session";
 const SESSION_DAYS = 7;
 const MAX_FAILURES = 5;
 const WINDOW_MS = 15 * 60 * 1000;
@@ -72,7 +72,8 @@ export class LoginLimiter {
   private recent(key: string): number[] {
     const cutoff = this.now() - WINDOW_MS;
     const list = (this.failures.get(key) ?? []).filter((t) => t > cutoff);
-    this.failures.set(key, list);
+    if (list.length === 0) this.failures.delete(key);
+    else this.failures.set(key, list);
     return list;
   }
 
@@ -81,7 +82,9 @@ export class LoginLimiter {
   }
 
   recordFailure(key: string): void {
-    this.recent(key).push(this.now());
+    const list = this.recent(key);
+    list.push(this.now());
+    this.failures.set(key, list);
   }
 
   reset(key: string): void {

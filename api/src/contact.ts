@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import { z } from "zod";
+import { clientIp } from "./clientIp";
 import type { Db } from "./db";
 import type { Notify } from "./mailer";
 
@@ -26,6 +27,12 @@ export class ContactLimiter {
   /** Records the attempt and says whether it is allowed. */
   allow(key: string): boolean {
     const now = Date.now();
+    // Drop visitors whose window has passed so the map cannot grow forever.
+    if (this.hits.size > 1000) {
+      for (const [k, list] of this.hits) {
+        if (list.every((t) => now - t >= this.windowMs)) this.hits.delete(k);
+      }
+    }
     const recent = (this.hits.get(key) ?? []).filter(
       (t) => now - t < this.windowMs,
     );
@@ -43,6 +50,7 @@ export interface PublicContactOptions {
   corsOrigin: string;
   notify?: Notify;
   limiter?: ContactLimiter;
+  proxySecret?: string;
 }
 
 export function publicContact(db: Db, opts: PublicContactOptions) {
@@ -76,8 +84,7 @@ export function publicContact(db: Db, opts: PublicContactOptions) {
       );
     }
 
-    const ip =
-      c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "local";
+    const ip = clientIp(c, opts.proxySecret);
     if (!limiter.allow(ip)) return c.json({ error: "too_many_messages" }, 429);
 
     const { name, email, message } = parsed.data;

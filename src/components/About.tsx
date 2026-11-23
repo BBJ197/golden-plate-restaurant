@@ -1,6 +1,6 @@
-import aboutImg from "../assets/images/About us.jpg";
-import stars from "../assets/images/5 star.png";
-import wideFood from "../assets/images/about img 2.png";
+import aboutImg from "../assets/images/about-us.webp";
+import stars from "../assets/images/5-star.webp";
+import wideFood from "../assets/images/about-img-2.webp";
 
 export default function About() {
   return (

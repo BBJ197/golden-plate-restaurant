@@ -134,10 +134,10 @@ describe.skipIf(!url)("database rules (real Postgres, rolled back)", () => {
       const signIn = async () => {
         const res = await post("/api/admin/login", { email, password: OLD });
         expect(res.status).toBe(200);
-        const token = /alemitu_session=([^;]+)/.exec(
+        const token = /golden_plate_session=([^;]+)/.exec(
           res.headers.get("set-cookie") ?? "",
         )?.[1];
-        return `alemitu_session=${token}`;
+        return `golden_plate_session=${token}`;
       };
       const me = (cookie: string) =>
         app.request("/api/admin/me", { headers: { cookie } });

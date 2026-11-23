@@ -38,7 +38,7 @@ function setup(
       headers: {
         "content-type": "application/json",
         origin: ORIGIN,
-        cookie: "alemitu_session=test",
+        cookie: "golden_plate_session=test",
         ...headers,
       },
       body: body === undefined ? undefined : JSON.stringify(body),

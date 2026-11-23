@@ -32,10 +32,10 @@ jobs:
       - name: Dump the database
         run: |
           /usr/lib/postgresql/$PG_MAJOR/bin/pg_dump "$DATABASE_URL" \
-            --no-owner --no-privileges --format=custom --file=alemitu-backup.dump
-          ls -lh alemitu-backup.dump
+            --no-owner --no-privileges --format=custom --file=golden-plate-backup.dump
+          ls -lh golden-plate-backup.dump
       - uses: actions/upload-artifact@v4
         with:
-          name: alemitu-backup-${{ github.run_id }}
-          path: alemitu-backup.dump
+          name: golden-plate-backup-${{ github.run_id }}
+          path: golden-plate-backup.dump
           retention-days: 90

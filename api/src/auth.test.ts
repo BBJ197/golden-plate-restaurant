@@ -6,7 +6,7 @@ import type { Db } from "./db";
 import { hashPassword } from "./password";
 
 const ORIGIN = "http://localhost:5173";
-const TOKEN_COOKIE = /alemitu_session=([^;]+)/;
+const TOKEN_COOKIE = /golden_plate_session=([^;]+)/;
 
 async function setup() {
   const passwordHash = await hashPassword("a-very-long-password");
@@ -119,7 +119,7 @@ describe("admin session", () => {
   it("rejects a made-up session cookie", async () => {
     const { app } = await setup();
     const res = await app.request("/api/admin/me", {
-      headers: { cookie: "alemitu_session=forged" },
+      headers: { cookie: "golden_plate_session=forged" },
     });
     expect(res.status).toBe(401);
   });
@@ -130,7 +130,7 @@ describe("admin session", () => {
       (await login("boss@example.com", "a-very-long-password")).headers.get(
         "set-cookie",
       ) ?? "";
-    const pair = `alemitu_session=${TOKEN_COOKIE.exec(cookie)?.[1]}`;
+    const pair = `golden_plate_session=${TOKEN_COOKIE.exec(cookie)?.[1]}`;
     const me = await app.request("/api/admin/me", {
       headers: { cookie: pair },
     });
