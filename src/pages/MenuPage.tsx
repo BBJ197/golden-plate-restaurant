@@ -122,7 +122,7 @@ export default function MenuPage() {
     <main id="main" className="menu-page">
       <div className="menu-pans" aria-hidden="true">
         <div className="menu-wine-scene">
-          <svg viewBox="0 0 1000 1280" focusable="false">
+          <svg viewBox="0 0 1020 1250" focusable="false">
             <defs>
               <clipPath id="mw-bowl">
                 <path d="M218 55C190 160 182 260 186 340C195 440 280 520 370 524C460 520 548 440 552 340C558 260 548 160 522 55Z" />
@@ -133,7 +133,7 @@ export default function MenuPage() {
                 <stop offset="1" stopColor="#2e0409" />
               </linearGradient>
             </defs>
-            <g transform="translate(735 777) scale(0.42)">
+            <g transform="translate(652 560) scale(0.6175)">
               <g clipPath="url(#mw-bowl)">
                 <g transform="translate(370 300)">
                   <g className="mw-slosh">
@@ -154,7 +154,7 @@ export default function MenuPage() {
                     </g>
                   </g>
                 </g>
-                <g transform="translate(405 292)">
+                <g transform="translate(400 292)">
                   <ellipse
                     className="mw-ring mw-ring-1"
                     rx="40"
@@ -189,11 +189,11 @@ export default function MenuPage() {
               </g>
               <image href={glass} width="736" height="1104" />
             </g>
-            <g transform="translate(883 633)">
+            <g transform="translate(879 504)">
               <g className="mw-stream">
                 <path
                   className="mw-stream-body"
-                  d="M0 0C14 22 22 120 22 266"
+                  d="M0 0C12 22 20 150 20 235"
                   fill="none"
                   stroke="#8f1627"
                   strokeWidth="9"
@@ -201,7 +201,7 @@ export default function MenuPage() {
                 />
                 <path
                   className="mw-stream-flow"
-                  d="M0 0C14 22 22 120 22 266"
+                  d="M0 0C12 22 20 150 20 235"
                   fill="none"
                   stroke="rgba(255,170,180,0.35)"
                   strokeWidth="3"
@@ -209,7 +209,7 @@ export default function MenuPage() {
                 />
               </g>
             </g>
-            <g transform="translate(905 899)">
+            <g transform="translate(899 739)">
               <circle className="mw-drop mw-d1" r="2.6" fill="#b3202f" />
               <circle className="mw-drop mw-d2" r="2.6" fill="#b3202f" />
               <circle className="mw-drop mw-d3" r="2.6" fill="#b3202f" />
@@ -220,10 +220,10 @@ export default function MenuPage() {
             <g className="mw-bottle">
               <image
                 href={bottle}
-                x="-480"
-                y="-514"
-                width="960"
-                height="1024"
+                x="-456"
+                y="-488.3"
+                width="912"
+                height="972.8"
               />
             </g>
           </svg>

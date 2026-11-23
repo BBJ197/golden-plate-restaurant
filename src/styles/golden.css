@@ -1803,7 +1803,7 @@ header.gp-header {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: min(96vw, 900px, 74vh);
+  width: min(96vw, 860px, 66vh);
   translate: -50% -50%;
   opacity: 0.75;
 }
@@ -1814,7 +1814,7 @@ header.gp-header {
   overflow: visible;
 }
 .mw-bottle {
-  transform: translate(500px, 360px) rotate(120deg);
+  transform: translate(482px, 297px) rotate(112deg);
 }
 .mw-stream-flow {
   stroke-dasharray: 14 22;
@@ -1901,10 +1901,10 @@ header.gp-header {
 @keyframes mw-sway {
   0%,
   100% {
-    transform: translate(500px, 360px) rotate(119.2deg);
+    transform: translate(482px, 297px) rotate(111.2deg);
   }
   50% {
-    transform: translate(500px, 360px) rotate(120.8deg);
+    transform: translate(482px, 297px) rotate(112.8deg);
   }
 }
 @keyframes mw-slosh {
@@ -1990,7 +1990,7 @@ header.gp-header {
 }
 @media (max-width: 700px) {
   .menu-wine-scene {
-    width: min(98vw, 64vh);
+    width: min(98vw, 60vh);
     opacity: 0.6;
   }
 }
