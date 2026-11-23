@@ -6,7 +6,14 @@ export default function PlateScene() {
   return (
     <div className="plate-scene">
       <svg className="ps-defs" width="0" height="0" focusable="false">
-        <filter id="ps-wisp" x="-10%" y="-10%" width="120%" height="120%">
+        <filter
+          id="ps-wisp"
+          colorInterpolationFilters="sRGB"
+          x="-10%"
+          y="-10%"
+          width="120%"
+          height="120%"
+        >
           <feTurbulence
             type="fractalNoise"
             baseFrequency="0.008 0.016"
@@ -14,6 +21,10 @@ export default function PlateScene() {
             seed="7"
           />
           <feDisplacementMap in="SourceGraphic" scale="28" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.93  0 0 0 0 0.93  0 0 0 0 0.95  0 0 0 3.4 0"
+          />
         </filter>
       </svg>
       <img
