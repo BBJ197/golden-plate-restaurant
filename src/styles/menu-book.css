@@ -1,0 +1,195 @@
+/* /menu layout: printed fine-dining menu book */
+
+/* search and filters: centered and narrower */
+.menu-page .menu-controls {
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+/* category pills become uppercase text tabs with a gold underline */
+.menu-page .menu-category-bar {
+  background: rgba(10, 8, 6, 0.82);
+  backdrop-filter: blur(10px);
+}
+.menu-page .menu-category-bar .menu-chip {
+  background: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  padding: 0.7rem 0.9rem;
+  color: rgba(255, 245, 225, 0.7);
+}
+.menu-page .menu-category-bar .menu-chip:hover:not([aria-pressed="true"]) {
+  background: transparent;
+  color: #fff;
+}
+.menu-page .menu-category-bar .menu-chip[aria-pressed="true"] {
+  background: transparent;
+  color: var(--menu-gold);
+  border-bottom-color: var(--menu-gold);
+}
+
+/* chapter headings: centered with lines on both sides */
+.menu-page .menu-section-head {
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+.menu-page .menu-section-head::before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to left, rgba(243, 150, 28, 0.6), transparent);
+}
+.menu-page .menu-section-head::after {
+  flex: 1;
+  background: linear-gradient(to right, rgba(243, 150, 28, 0.6), transparent);
+}
+.menu-page .menu-section-head h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 1.5rem;
+}
+
+/* Popular: swipeable gallery strip, keeps the photo cards */
+.menu-page .menu-popular .menu-list {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.8rem;
+  scrollbar-width: thin;
+}
+.menu-page .menu-popular .menu-list > .menu-card {
+  flex: 0 0 min(260px, 72vw);
+  scroll-snap-align: start;
+}
+
+/* category sections: menu-book rows */
+.menu-page section:not(.menu-popular) .menu-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+.menu-page section:not(.menu-popular) .menu-list > .menu-card {
+  display: grid;
+  grid-template-columns: 88px auto minmax(12px, 1fr) auto;
+  column-gap: 1rem;
+  align-items: start;
+  position: relative;
+  padding: 1rem 0.4rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(243, 150, 28, 0.18);
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  transform: none;
+}
+.menu-page section:not(.menu-popular) .menu-list > .menu-card:hover {
+  background: rgba(243, 150, 28, 0.07);
+  box-shadow: none;
+  transform: none;
+}
+/* the dotted line between name and price */
+.menu-page section:not(.menu-popular) .menu-list > .menu-card::after {
+  content: "";
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
+  margin-top: 1.35rem;
+  border-bottom: 2px dotted rgba(243, 150, 28, 0.5);
+}
+.menu-page section:not(.menu-popular) .menu-card-media {
+  display: contents;
+}
+.menu-page section:not(.menu-popular) .menu-card-photo {
+  grid-column: 1;
+  grid-row: 1;
+  width: 88px;
+  height: 88px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(243, 150, 28, 0.45);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+.menu-page section:not(.menu-popular) .menu-card-body {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+}
+.menu-page section:not(.menu-popular) .menu-card-body h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+}
+.menu-page section:not(.menu-popular) .menu-card-desc {
+  margin: 0;
+  max-width: 34ch;
+  font-size: 0.88rem;
+  opacity: 0.78;
+}
+.menu-page section:not(.menu-popular) .menu-price {
+  grid-column: 4;
+  grid-row: 1;
+  position: static;
+  inset: auto;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  color: #f3c15a;
+  font-family: var(--menu-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+/* items without a photo: single column, price pinned to the right */
+.menu-page section:not(.menu-popular) .menu-list > .menu-card.no-photo {
+  grid-template-columns: minmax(0, 1fr);
+}
+.menu-page section:not(.menu-popular) .menu-card.no-photo::after {
+  display: none;
+}
+.menu-page section:not(.menu-popular) .menu-card.no-photo .menu-card-body {
+  grid-column: 1;
+  padding-right: 5.5rem;
+}
+.menu-page section:not(.menu-popular) .menu-card.no-photo .menu-price {
+  position: absolute;
+  top: 1rem;
+  right: 0.4rem;
+}
+
+@media (min-width: 900px) {
+  .menu-page section:not(.menu-popular) .menu-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3.5rem;
+  }
+}
+@media (max-width: 640px) {
+  .menu-page section:not(.menu-popular) .menu-list > .menu-card {
+    grid-template-columns: 72px minmax(0, 1fr) auto;
+    column-gap: 0.8rem;
+  }
+  .menu-page section:not(.menu-popular) .menu-card::after {
+    display: none;
+  }
+  .menu-page section:not(.menu-popular) .menu-card-photo {
+    width: 72px;
+    height: 72px;
+  }
+  .menu-page section:not(.menu-popular) .menu-price {
+    grid-column: 3;
+  }
+  .menu-page section:not(.menu-popular) .menu-card-desc {
+    max-width: none;
+  }
+}
