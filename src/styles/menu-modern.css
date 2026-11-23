@@ -1,4 +1,4 @@
-/* Menu page: modern dark look that matches the home page. Loaded last. */
+﻿/* Menu page: modern dark look that matches the home page. Loaded last. */
 .menu-page {
   --menu-glass: rgba(255, 255, 255, 0.06);
   --menu-glass-border: rgba(255, 255, 255, 0.12);
@@ -467,224 +467,73 @@
   margin-inline: auto;
 }
 
-/* Realistic cinematic menu background */
-.menu-page {
-  background-color: #18090d;
-  background-image:
-    radial-gradient(
-      ellipse at 48% 80%,
-      rgba(159, 69, 27, 0.22),
-      transparent 58%
-    ),
-    radial-gradient(
-      ellipse at 85% 25%,
-      rgba(103, 27, 42, 0.22),
-      transparent 55%
-    ),
-    linear-gradient(155deg, #260e16, #12080b 70%, #210d12);
-  background-attachment: fixed;
-}
-
-.menu-pans {
-  perspective: 1100px;
-  background:
-    radial-gradient(
-      ellipse at 50% 95%,
-      rgba(230, 125, 42, 0.15),
-      transparent 55%
-    ),
-    linear-gradient(180deg, rgba(8, 3, 5, 0.1), rgba(8, 3, 5, 0.32));
-}
-
-.menu-pans::after {
-  background: radial-gradient(
-    ellipse at 50% 75%,
-    transparent 5%,
-    rgba(7, 3, 5, 0.38) 100%
-  );
-}
-
-.menu-pan-main {
-  transform-origin: 50% 85%;
-  animation: realistic-pan-motion 5.8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-  filter: drop-shadow(0 24px 35px rgba(0, 0, 0, 0.55));
-}
-
-.menu-pan-main::before {
-  opacity: 0.82;
-  filter: contrast(1.12) saturate(0.92) brightness(0.88);
-}
-
-.menu-pan-main::after {
-  opacity: 0.42;
-  filter: blur(22px);
-  animation: realistic-steam 6.5s ease-in-out infinite;
-  transform-origin: bottom center;
-}
-
-@keyframes realistic-pan-motion {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0) rotate(-2deg);
-  }
-  25% {
-    transform: translateX(calc(-50% + 12px)) translateY(-7px) rotate(1deg);
-  }
-  50% {
-    transform: translateX(calc(-50% + 22px)) translateY(-12px) rotate(3deg);
-  }
-  75% {
-    transform: translateX(calc(-50% - 9px)) translateY(-4px) rotate(-1deg);
-  }
-}
-
-@keyframes realistic-steam {
-  0% {
-    opacity: 0.12;
-    transform: translateY(24px) scale(0.75, 0.8) skewX(-3deg);
-  }
-  45% {
-    opacity: 0.46;
-    transform: translateY(-65px) scale(1.05, 1.3) skewX(5deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-170px) scale(1.5, 1.8) skewX(-7deg);
-  }
-}
-
-.menu-page .menu-card,
-.menu-page .menu-card.no-photo,
-.menu-page .menu-popular .menu-card {
-  background: rgba(30, 22, 24, 0.82);
-  border: 1px solid rgba(255, 218, 160, 0.11);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.menu-page .menu-card:not(.is-unavailable):hover {
-  transform: translateY(-5px);
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.4);
-}
-
-@media (max-width: 640px) {
-  .menu-pan-main {
-    animation-duration: 7s;
-  }
-  .menu-pan-main::after {
-    filter: blur(16px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .menu-pan-main,
-  .menu-pan-main::after {
-    animation: none;
-  }
-  .menu-page .menu-card {
-    transition: none;
-  }
-}
-
-/* Golden Plate: realistic wine background */
+/* Golden Plate wine background */
 .menu-page {
   position: relative;
   isolation: isolate;
   min-height: 100vh;
-  background-color: #170408;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(10, 2, 5, 0.58) 0%,
-      rgba(10, 2, 5, 0.22) 58%,
-      rgba(10, 2, 5, 0.04) 100%
-    ),
-    url("/assets/images/menu%20background.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #160307 url("/assets/images/menu%20background.png") center
+    center / cover no-repeat !important;
 }
 
-/* Soft cinematic light movement */
+.menu-page .menu-pans,
+.menu-page .menu-wine-scene {
+  display: none !important;
+}
+
 .menu-page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  background: radial-gradient(
-    ellipse at 77% 38%,
-    rgba(170, 14, 37, 0.13),
-    transparent 32%
-  );
-  animation: wine-light-breathe 4s ease-in-out infinite;
+  content: none !important;
 }
 
-/* Animated wine-stream highlights */
 .menu-page::after {
   content: "";
   position: absolute;
-  top: 13%;
-  right: 22%;
-  width: 2.2%;
-  height: 27%;
+  top: 17%;
+  right: 24.7%;
+  width: 2.6%;
+  height: 37%;
   pointer-events: none;
-  z-index: -1;
-  transform: rotate(23deg);
+  z-index: 0;
+  transform: rotate(16deg);
   transform-origin: top center;
   border-radius: 50%;
   background: repeating-linear-gradient(
     to bottom,
     transparent 0px,
-    rgba(255, 105, 115, 0) 8px,
-    rgba(255, 125, 135, 0.45) 13px,
-    transparent 25px
+    rgba(255, 110, 130, 0.1) 10px,
+    rgba(255, 150, 160, 0.45) 18px,
+    transparent 40px
   );
-  background-size: 100% 120px;
-  filter: blur(4px);
+  background-size: 100% 100px;
+  filter: blur(2px);
   mix-blend-mode: screen;
-  animation: wine-flow-down 0.8s linear infinite;
+  animation: golden-wine-flow 0.65s linear infinite;
 }
 
-@keyframes wine-flow-down {
+@keyframes golden-wine-flow {
   from {
     background-position-y: 0;
   }
   to {
-    background-position-y: 120px;
+    background-position-y: 100px;
   }
 }
 
-@keyframes wine-light-breathe {
-  0%,
-  100% {
-    opacity: 0.45;
-  }
-  50% {
-    opacity: 0.9;
-  }
-}
-
-/* Keep original image and wine level fixed */
-.menu-page {
-  animation: none;
+.menu-page > * {
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
-  .menu-page {
-    background-attachment: scroll;
-    background-position: 70% center;
-  }
   .menu-page::after {
     display: none;
+  }
+  .menu-page {
+    background-position: 72% center !important;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .menu-page::before,
   .menu-page::after {
     animation: none;
   }
