@@ -467,74 +467,31 @@
   margin-inline: auto;
 }
 
-/* Golden Plate wine background */
-.menu-page {
-  position: relative;
-  isolation: isolate;
-  min-height: 100vh;
-  background: #160307 url("/assets/images/menu%20background.png") center
-    center / cover no-repeat !important;
+/* MENU BACKGROUND VISIBILITY FIX */
+
+html body .menu-page {
+  background-image: url("/assets/images/menu%20background.png") !important;
+  background-color: #180508 !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
 }
 
-.menu-page .menu-pans,
-.menu-page .menu-wine-scene {
+html body .menu-page .menu-pans,
+html body .menu-page .menu-wine-scene {
   display: none !important;
 }
 
-.menu-page::before {
+html body .menu-page::before,
+html body .menu-page::after {
   content: none !important;
-}
-
-.menu-page::after {
-  content: "";
-  position: absolute;
-  top: 17%;
-  right: 24.7%;
-  width: 2.6%;
-  height: 37%;
-  pointer-events: none;
-  z-index: 0;
-  transform: rotate(16deg);
-  transform-origin: top center;
-  border-radius: 50%;
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0px,
-    rgba(255, 110, 130, 0.1) 10px,
-    rgba(255, 150, 160, 0.45) 18px,
-    transparent 40px
-  );
-  background-size: 100% 100px;
-  filter: blur(2px);
-  mix-blend-mode: screen;
-  animation: golden-wine-flow 0.65s linear infinite;
-}
-
-@keyframes golden-wine-flow {
-  from {
-    background-position-y: 0;
-  }
-  to {
-    background-position-y: 100px;
-  }
-}
-
-.menu-page > * {
-  position: relative;
-  z-index: 1;
+  display: none !important;
 }
 
 @media (max-width: 768px) {
-  .menu-page::after {
-    display: none;
-  }
-  .menu-page {
-    background-position: 72% center !important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .menu-page::after {
-    animation: none;
+  html body .menu-page {
+    background-attachment: scroll !important;
+    background-position: 70% center !important;
   }
 }
