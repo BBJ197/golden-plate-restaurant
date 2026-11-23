@@ -22,18 +22,31 @@
   opacity: 0.92;
   filter: drop-shadow(0 28px 36px rgba(0, 0, 0, 0.55));
 }
+/* one smoke column in the middle: fade at the top, narrow at the sides */
 .ps-steam {
-  --flip: 1;
   opacity: 0;
   filter: url(#ps-wisp);
-  -webkit-mask-image: linear-gradient(to bottom, #000 22%, transparent 36%);
-  mask-image: linear-gradient(to bottom, #000 22%, transparent 36%);
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 28%, transparent 40%),
+    linear-gradient(
+      to right,
+      transparent 28%,
+      #000 42%,
+      #000 58%,
+      transparent 72%
+    );
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, #000 28%, transparent 40%),
+    linear-gradient(
+      to right,
+      transparent 28%,
+      #000 42%,
+      #000 58%,
+      transparent 72%
+    );
+  mask-composite: intersect;
   transform-origin: 50% 48%;
-}
-/* mirrored copies put smoke on the right side too */
-.ps-steam-2,
-.ps-steam-4 {
-  --flip: -1;
 }
 .menu-pans::after {
   background: rgba(0, 0, 0, 0.28);
@@ -69,17 +82,15 @@
 }
 @keyframes ps-drift {
   0% {
-    transform: translate(0, 1%) scale(calc(var(--flip) * 1), 1);
+    transform: translate(0, 4%) scale(1);
     opacity: 0;
   }
   50% {
-    transform: translate(calc(var(--flip) * 1%), -4%)
-      scale(calc(var(--flip) * 1.035), 1.035);
+    transform: translate(0.5%, -0.5%) scale(1.03);
     opacity: 0.6;
   }
   100% {
-    transform: translate(calc(var(--flip) * 2%), -9%)
-      scale(calc(var(--flip) * 1.07), 1.07);
+    transform: translate(1%, -6%) scale(1.06);
     opacity: 0;
   }
 }
