@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import type { Menu, MenuItem } from "../api/menu";
 import { useMenu } from "../api/useMenu";
@@ -89,7 +89,7 @@ function ItemCard({
         )}
         {!item.isAvailable && (
           <p className="menu-unavailable">
-            {pickText("Unavailable", "áŠ á‹­áŒˆáŠáˆ", lang)}
+            {pickText("Unavailable", "አይገኝም", lang)}
           </p>
         )}
         {!photo && price}
@@ -139,7 +139,7 @@ export default function MenuPage() {
             >
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
-            {pickText("Back to home", "á‹ˆá‹° áˆ˜áŠáˆ» á‰°áˆ˜áˆˆáˆµ", lang)}
+            {pickText("Back to home", "ወደ መነሻ ተመለስ", lang)}
           </Link>
           <div className="menu-lang" role="group" aria-label="Language">
             <button
@@ -167,18 +167,18 @@ export default function MenuPage() {
         <div className="menu-banner-text">
           <p className="menu-eyebrow">
             {pickText(
-              "Traditional taste â€¢ Freshly brewed",
-              "á‰£áˆ…áˆ‹á‹Š áŒ£á‹•áˆ â€¢ á‰µáŠ©áˆµ á‰¡áŠ“á‰¡áŠ“",
+              "Traditional taste • Freshly brewed",
+              "ባህላዊ ጣዕም • ትኩስ ቡናቡና",
               lang,
             )}
           </p>
           <h1 id="menu-title">
-            {pickText("Our Menu", "á‹¨áŠ¥áŠ› á‹¨áˆáŒá‰¥ á‹áˆ­á‹áˆ®á‰½", lang)}
+            {pickText("Our Menu", "የእኛ የምግብ ዝርዝሮች", lang)}
           </h1>
           <p className="menu-banner-sub">
             {pickText(
               "Authentic Ethiopian flavors, crafted with love.",
-              "áŠ¥á‹áŠá‰°áŠ› á‹¨áŠ¢á‰µá‹®áŒµá‹« áŒ£á‹•áˆá£ á‰ áá‰…áˆ­ á‹¨á‰°á‹˜áŒ‹áŒ€á¢",
+              "እውነተኛ የኢትዮጵያ ጣዕም፣ በፍቅር የተዘጋጀ።",
               lang,
             )}
           </p>
@@ -192,7 +192,7 @@ export default function MenuPage() {
           <p>
             {pickText(
               "We could not load the menu. Please check your connection and try again.",
-              "áˆáŠ“áˆŒá‹áŠ• áˆ˜áŒ«áŠ• áŠ áˆá‰°á‰»áˆˆáˆá¢ áŠ¥á‰£áŠ­á‹Ž áŒáŠ•áŠ™áŠá‰µá‹ŽáŠ• á‹­áˆá‰µáˆ¹ áŠ¥áŠ“ áŠ¥áŠ•á‹°áŒˆáŠ“ á‹­áˆžáŠ­áˆ©á¢",
+              "ምናሌውን መጫን አልተቻለም። እባክዎ ግንኙነትዎን ይፈትሹ እና እንደገና ይሞክሩ።",
               lang,
             )}
           </p>
@@ -202,7 +202,7 @@ export default function MenuPage() {
             onClick={() => void refetch()}
             disabled={isFetching}
           >
-            {pickText("Try again", "áŠ¥áŠ•á‹°áŒˆáŠ“ áˆžáŠ­áˆ­", lang)}
+            {pickText("Try again", "እንደገና ሞክር", lang)}
           </button>
         </div>
       )}
@@ -211,7 +211,7 @@ export default function MenuPage() {
         <p>
           {pickText(
             "The menu is empty right now. Please check back soon.",
-            "áˆáŠ“áˆŒá‹ áŠ áˆáŠ• á‰£á‹¶ áŠá‹á¢ áŠ¥á‰£áŠ­á‹Ž á‰ á‰…áˆ­á‰¡ á‹­áˆ˜áˆˆáˆ±á¢",
+            "ምናሌው አሁን ባዶ ነው። እባክዎ በቅርቡ ይመለሱ።",
             lang,
           )}
         </p>
@@ -225,7 +225,7 @@ export default function MenuPage() {
                 <MenuIcon name="search" size={20} />
               </span>
               <label htmlFor="menu-search" className="menu-search-label">
-                {pickText("Search the menu", "áˆáŠ“áˆŒá‹áŠ• áˆáˆáŒ", lang)}
+                {pickText("Search the menu", "ምናሌውን ፈልግ", lang)}
               </label>
               <input
                 id="menu-search"
@@ -233,7 +233,7 @@ export default function MenuPage() {
                 className="menu-search"
                 placeholder={pickText(
                   "Search by name, description or category",
-                  "á‰ áˆµáˆá£ á‰ áˆ˜áŒáˆˆáŒ« á‹ˆá‹­áˆ á‰ áˆá‹µá‰¥ áˆáˆáŒ",
+                  "በስም፣ በመግለጫ ወይም በምድብ ፈልግ",
                   lang,
                 )}
                 value={filters.query}
@@ -245,7 +245,7 @@ export default function MenuPage() {
             <details className="menu-filter-panel">
               <summary className="menu-filter-toggle">
                 <MenuIcon name="grid" size={18} />
-                {pickText("Filters", "áˆ›áŒ£áˆªá‹«", lang)}
+                {pickText("Filters", "ማጣሪያ", lang)}
                 {filters.tagSlugs.length > 0 && (
                   <span className="menu-filter-count">
                     {filters.tagSlugs.length}
@@ -260,12 +260,12 @@ export default function MenuPage() {
                 <button
                   type="button"
                   className="menu-chip"
-                  aria-label={pickText("Any diet", "áˆáˆ‰áˆ áŠ á‹­áŠá‰µ", lang)}
+                  aria-label={pickText("Any diet", "ሁሉም አይነት", lang)}
                   aria-pressed={filters.tagSlugs.length === 0}
                   onClick={() => setFilters((f) => ({ ...f, tagSlugs: [] }))}
                 >
                   <MenuIcon name="grid" size={16} />
-                  {pickText("Any diet", "áˆáˆ‰áˆ áŠ á‹­áŠá‰µ", lang)}
+                  {pickText("Any diet", "ሁሉም አይነት", lang)}
                 </button>
                 {data.tags.map((tag) => {
                   const icon = iconForTag(tag.slug);
@@ -295,7 +295,7 @@ export default function MenuPage() {
                 onClick={() => setFilters((f) => ({ ...f, categoryId: null }))}
               >
                 <MenuIcon name="grid" size={16} />
-                {pickText("All", "áˆáˆ‰áˆ", lang)}
+                {pickText("All", "ሁሉም", lang)}
               </button>
               {data.categories.map((category) => (
                 <button
@@ -317,7 +317,7 @@ export default function MenuPage() {
           <div className="menu-summary">
             <p role="status">
               {lang === "am"
-                ? `${visible.length} áŠ•áŒ¥áˆ`
+                ? `${visible.length} ንጥል`
                 : `${visible.length} ${visible.length === 1 ? "item" : "items"}`}
             </p>
             {active && (
@@ -326,7 +326,7 @@ export default function MenuPage() {
                 className="menu-button"
                 onClick={() => setFilters(emptyFilters)}
               >
-                {pickText("Clear filters", "áˆ›áŒ£áˆªá‹« áŠ áŒ½á‹³", lang)}
+                {pickText("Clear filters", "ማጣሪያ አጽዳ", lang)}
               </button>
             )}
           </div>
@@ -335,7 +335,7 @@ export default function MenuPage() {
             <p className="menu-empty">
               {pickText(
                 "No items match. Try different words or clear the filters.",
-                "áˆáŠ•áˆ áŠ áˆá‰°áŒˆáŠ˜áˆá¢ áˆŒáˆŽá‰½ á‰ƒáˆ‹á‰µáŠ• á‹­áˆžáŠ­áˆ© á‹ˆá‹­áˆ áˆ›áŒ£áˆªá‹«á‹Žá‰¹áŠ• á‹«áŒ½á‹±á¢",
+                "ምንም አልተገኘም። ሌሎች ቃላትን ይሞክሩ ወይም ማጣሪያዎቹን ያጽዱ።",
                 lang,
               )}
             </p>
@@ -347,12 +347,12 @@ export default function MenuPage() {
                 <MenuIcon name="star" size={28} />
                 <div>
                   <h2 id="popular-heading">
-                    {pickText("Popular", "á‰°á‹ˆá‹³áŒ…", lang)}
+                    {pickText("Popular", "ተወዳጅ", lang)}
                   </h2>
                   <p className="menu-section-sub">
                     {pickText(
                       "Our most loved items",
-                      "á‰ áŒ£áˆ á‹¨á‰°á‹ˆá‹°á‹± áˆáˆ­áŒ«á‹Žá‰»á‰½áŠ•",
+                      "በጣም የተወደዱ ምርጫዎቻችን",
                       lang,
                     )}
                   </p>
