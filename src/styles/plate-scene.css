@@ -1,4 +1,4 @@
-/* /menu background: centered plate with animated smoke */
+﻿/* /menu background: centered plate; its own smoke is copied and animated */
 .plate-scene {
   position: absolute;
   top: 50%;
@@ -10,34 +10,29 @@
 .ps-defs {
   position: absolute;
 }
-.ps-plate {
+.ps-plate,
+.ps-steam {
   display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+}
+.ps-plate {
   opacity: 0.92;
   filter: drop-shadow(0 28px 36px rgba(0, 0, 0, 0.55));
 }
-.ps-smoke {
-  position: absolute;
-  inset: 0;
-  filter: url(#ps-wisp);
-}
-.ps-puff {
-  position: absolute;
-  left: var(--x);
-  bottom: 52%;
-  width: var(--s);
-  aspect-ratio: 1;
-  margin-left: calc(var(--s) / -2);
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.55) 0,
-    rgba(235, 235, 235, 0.25) 40%,
-    transparent 70%
-  );
-  filter: blur(10px);
+.ps-steam {
   opacity: 0;
+  filter: url(#ps-wisp);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0,
+    #000 36%,
+    transparent 50%
+  );
+  mask-image: linear-gradient(to bottom, #000 0, #000 36%, transparent 50%);
+  transform-origin: 50% 48%;
 }
 .menu-pans::after {
   background: rgba(0, 0, 0, 0.28);
@@ -46,8 +41,11 @@
   .ps-plate {
     animation: ps-breathe 7s ease-in-out infinite alternate;
   }
-  .ps-puff {
-    animation: ps-rise var(--t) ease-out var(--d) infinite;
+  .ps-steam-1 {
+    animation: ps-drift 9s ease-in-out infinite;
+  }
+  .ps-steam-2 {
+    animation: ps-drift-b 11s ease-in-out -5s infinite;
   }
 }
 @keyframes ps-breathe {
@@ -58,27 +56,34 @@
     transform: translateY(-4px) scale(1.006);
   }
 }
-@keyframes ps-rise {
+@keyframes ps-drift {
   0% {
-    transform: translate(0, 0) scale(0.45);
+    transform: translate(0, 1%) scale(1);
     opacity: 0;
   }
-  18% {
+  25% {
     opacity: 0.6;
   }
-  60% {
-    opacity: 0.35;
+  100% {
+    transform: translate(2%, -9%) scale(1.07);
+    opacity: 0;
+  }
+}
+@keyframes ps-drift-b {
+  0% {
+    transform: translate(0, 1%) scale(1.02);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.5;
   }
   100% {
-    transform: translate(var(--drift), -62vh) scale(1.9);
+    transform: translate(-2.5%, -11%) scale(1.1);
     opacity: 0;
   }
 }
 @media (max-width: 700px) {
   .plate-scene {
     width: min(150vw, 120vh);
-  }
-  .ps-puff {
-    filter: blur(7px);
   }
 }
