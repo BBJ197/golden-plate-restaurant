@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter } from "react-router-dom";
@@ -20,6 +20,7 @@ import "@fontsource/great-vibes/latin-400.css";
 import "@fontsource/noto-serif/latin-400.css";
 import "@fontsource/noto-serif/latin-600.css";
 import "./styles/golden.css";
+import "./styles/menu-book.css";
 import App from "./App";
 
 const queryClient = new QueryClient();
