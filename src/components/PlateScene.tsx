@@ -23,8 +23,12 @@ export default function PlateScene() {
           <feDisplacementMap in="SourceGraphic" scale="28" />
           <feColorMatrix
             type="matrix"
-            values="0 0 0 0 0.93  0 0 0 0 0.93  0 0 0 0 0.95  0 0 0 3.4 0"
+            values="0 0 0 0 0.8  0 0 0 0 0.8  0 0 0 0 0.82  0 0 0 3 0"
           />
+          <feComponentTransfer>
+            <feFuncA type="table" tableValues="0 0.5 0.7 0.7" />
+          </feComponentTransfer>
+          <feGaussianBlur stdDeviation="2" />
         </filter>
       </svg>
       <img
