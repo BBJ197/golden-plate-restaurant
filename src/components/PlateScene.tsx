@@ -1,7 +1,7 @@
 ﻿import plate from "../assets/images/plate.png";
 import "../styles/plate-scene.css";
 
-/** Centered plate background. The smoke in the photo itself drifts upward. */
+/** Centered plate background. The smoke in the photo drifts up, on both sides, nonstop. */
 export default function PlateScene() {
   return (
     <div className="plate-scene">
@@ -41,6 +41,8 @@ export default function PlateScene() {
       />
       <img className="ps-steam ps-steam-1" src={plate} alt="" />
       <img className="ps-steam ps-steam-2" src={plate} alt="" />
+      <img className="ps-steam ps-steam-3" src={plate} alt="" />
+      <img className="ps-steam ps-steam-4" src={plate} alt="" />
     </div>
   );
 }
