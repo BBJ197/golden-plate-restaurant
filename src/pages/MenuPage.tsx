@@ -4,6 +4,8 @@ import type { Menu, MenuItem } from "../api/menu";
 import { useMenu } from "../api/useMenu";
 import MenuIcon from "../components/MenuIcon";
 import MobileTabBar from "../components/MobileTabBar";
+import bottle from "../assets/images/bottle.png";
+import glass from "../assets/images/glass.png";
 import {
   emptyFilters,
   filterItems,
@@ -119,7 +121,113 @@ export default function MenuPage() {
   return (
     <main id="main" className="menu-page">
       <div className="menu-pans" aria-hidden="true">
-        <div className="menu-pan menu-pan-main" />
+        <div className="menu-wine-scene">
+          <svg viewBox="0 0 1020 1250" focusable="false">
+            <defs>
+              <clipPath id="mw-bowl">
+                <path d="M218 55C190 160 182 260 186 340C195 440 280 520 370 524C460 520 548 440 552 340C558 260 548 160 522 55Z" />
+              </clipPath>
+              <linearGradient id="mw-wine-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stopColor="#a41d2d" />
+                <stop offset="0.35" stopColor="#6b0c1b" />
+                <stop offset="1" stopColor="#2e0409" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(652 560) scale(0.6175)">
+              <g clipPath="url(#mw-bowl)">
+                <g transform="translate(370 300)">
+                  <g className="mw-slosh">
+                    <g transform="translate(-370 -300)">
+                      <path
+                        className="mw-wave-b"
+                        d="M-150 296q37.5 14 75 0t75 0t75 0t75 0t75 0t75 0t75 0t75 0t75 0t75 0t75 0t75 0V620H-150Z"
+                        fill="#c22a3b"
+                        fillOpacity="0.55"
+                      />
+                      <path
+                        className="mw-wave-a"
+                        d="M-150 290q37.5-18 75 0t75 0t75 0t75 0t75 0t75 0t75 0t75 0t75 0t75 0t75 0t75 0V620H-150Z"
+                        fill="url(#mw-wine-grad)"
+                        stroke="rgba(255,190,195,0.4)"
+                        strokeWidth="1.5"
+                      />
+                    </g>
+                  </g>
+                </g>
+                <g transform="translate(400 292)">
+                  <ellipse
+                    className="mw-ring mw-ring-1"
+                    rx="40"
+                    ry="9"
+                    fill="none"
+                    stroke="rgba(255,200,205,0.6)"
+                    strokeWidth="2"
+                  />
+                  <ellipse
+                    className="mw-ring mw-ring-2"
+                    rx="40"
+                    ry="9"
+                    fill="none"
+                    stroke="rgba(255,200,205,0.6)"
+                    strokeWidth="2"
+                  />
+                  <ellipse
+                    className="mw-ring mw-ring-3"
+                    rx="40"
+                    ry="9"
+                    fill="none"
+                    stroke="rgba(255,200,205,0.6)"
+                    strokeWidth="2"
+                  />
+                  <ellipse
+                    className="mw-foam"
+                    rx="34"
+                    ry="6"
+                    fill="rgba(255,205,210,0.28)"
+                  />
+                </g>
+              </g>
+              <image href={glass} width="736" height="1104" />
+            </g>
+            <g transform="translate(879 504)">
+              <g className="mw-stream">
+                <path
+                  className="mw-stream-body"
+                  d="M0 0C12 22 20 150 20 235"
+                  fill="none"
+                  stroke="#8f1627"
+                  strokeWidth="9"
+                  strokeLinecap="round"
+                />
+                <path
+                  className="mw-stream-flow"
+                  d="M0 0C12 22 20 150 20 235"
+                  fill="none"
+                  stroke="rgba(255,170,180,0.35)"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+              </g>
+            </g>
+            <g transform="translate(899 739)">
+              <circle className="mw-drop mw-d1" r="2.6" fill="#b3202f" />
+              <circle className="mw-drop mw-d2" r="2.6" fill="#b3202f" />
+              <circle className="mw-drop mw-d3" r="2.6" fill="#b3202f" />
+              <circle className="mw-drop mw-d4" r="2.6" fill="#b3202f" />
+              <circle className="mw-drop mw-d5" r="2.6" fill="#b3202f" />
+              <circle className="mw-drop mw-d6" r="2.6" fill="#b3202f" />
+            </g>
+            <g className="mw-bottle">
+              <image
+                href={bottle}
+                x="-456"
+                y="-488.3"
+                width="912"
+                height="972.8"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
       <section className="menu-banner" aria-labelledby="menu-title">
         <div className="menu-banner-bar">
