@@ -23,16 +23,17 @@
   filter: drop-shadow(0 28px 36px rgba(0, 0, 0, 0.55));
 }
 .ps-steam {
+  --flip: 1;
   opacity: 0;
   filter: url(#ps-wisp);
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    #000 0,
-    #000 22%,
-    transparent 36%
-  );
-  mask-image: linear-gradient(to bottom, #000 0, #000 22%, transparent 36%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 22%, transparent 36%);
+  mask-image: linear-gradient(to bottom, #000 22%, transparent 36%);
   transform-origin: 50% 48%;
+}
+/* mirrored copies put smoke on the right side too */
+.ps-steam-2,
+.ps-steam-4 {
+  --flip: -1;
 }
 .menu-pans::after {
   background: rgba(0, 0, 0, 0.28);
@@ -41,11 +42,21 @@
   .ps-plate {
     animation: ps-breathe 7s ease-in-out infinite alternate;
   }
+  /* 4 layers, evenly staggered: one fades in as another fades out, so it never stops */
+  .ps-steam {
+    animation: ps-drift 12s linear infinite;
+  }
   .ps-steam-1 {
-    animation: ps-drift 9s ease-in-out infinite;
+    animation-delay: 0s;
   }
   .ps-steam-2 {
-    animation: ps-drift-b 11s ease-in-out -5s infinite;
+    animation-delay: -3s;
+  }
+  .ps-steam-3 {
+    animation-delay: -6s;
+  }
+  .ps-steam-4 {
+    animation-delay: -9s;
   }
 }
 @keyframes ps-breathe {
@@ -58,27 +69,17 @@
 }
 @keyframes ps-drift {
   0% {
-    transform: translate(0, 1%) scale(1);
+    transform: translate(0, 1%) scale(calc(var(--flip) * 1), 1);
     opacity: 0;
   }
-  25% {
+  50% {
+    transform: translate(calc(var(--flip) * 1%), -4%)
+      scale(calc(var(--flip) * 1.035), 1.035);
     opacity: 0.6;
   }
   100% {
-    transform: translate(2%, -9%) scale(1.07);
-    opacity: 0;
-  }
-}
-@keyframes ps-drift-b {
-  0% {
-    transform: translate(0, 1%) scale(1.02);
-    opacity: 0;
-  }
-  30% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(-2.5%, -11%) scale(1.1);
+    transform: translate(calc(var(--flip) * 2%), -9%)
+      scale(calc(var(--flip) * 1.07), 1.07);
     opacity: 0;
   }
 }
