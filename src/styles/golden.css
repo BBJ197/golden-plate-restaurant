@@ -1897,3 +1897,203 @@ header.gp-header {
     opacity: 0.6;
   }
 }
+
+/* /menu page background: a bottle always pouring wine into a half-full glass */
+.menu-pans {
+  display: block;
+}
+.menu-wine-scene {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(96vw, 900px, 74vh);
+  translate: -50% -50%;
+  opacity: 0.75;
+}
+.menu-wine-scene svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.mw-bottle {
+  transform: translate(500px, 360px) rotate(120deg);
+}
+.mw-stream-flow {
+  stroke-dasharray: 14 22;
+}
+.mw-ring,
+.mw-drop {
+  opacity: 0;
+}
+.mw-wave-b {
+  transform: translateX(-40px);
+}
+.mw-d1 {
+  --dx: -18px;
+  --dy: -30px;
+}
+.mw-d2 {
+  --dx: 14px;
+  --dy: -34px;
+  animation-delay: 0.27s;
+}
+.mw-d3 {
+  --dx: -8px;
+  --dy: -22px;
+  animation-delay: 0.53s;
+}
+.mw-d4 {
+  --dx: 22px;
+  --dy: -24px;
+  animation-delay: 0.8s;
+}
+.mw-d5 {
+  --dx: -24px;
+  --dy: -18px;
+  animation-delay: 1.07s;
+}
+.mw-d6 {
+  --dx: 6px;
+  --dy: -38px;
+  animation-delay: 1.33s;
+}
+.menu-page .menu-card,
+.menu-page .menu-card.no-photo,
+.menu-page .menu-popular .menu-card {
+  background: rgba(23, 18, 14, 0.84);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mw-bottle {
+    animation: mw-sway 7s ease-in-out infinite;
+  }
+  .mw-stream {
+    animation: mw-wobble 3.1s ease-in-out infinite alternate;
+  }
+  .mw-stream-body {
+    animation: mw-glug 1.3s ease-in-out infinite;
+  }
+  .mw-stream-flow {
+    animation: mw-flow 0.7s linear infinite;
+  }
+  .mw-slosh {
+    animation: mw-slosh 3.6s ease-in-out infinite;
+  }
+  .mw-wave-a {
+    animation: mw-wave-a 5s linear infinite;
+  }
+  .mw-wave-b {
+    animation: mw-wave-b 7s linear infinite;
+  }
+  .mw-ring {
+    animation: mw-ring 2.4s ease-out infinite;
+  }
+  .mw-ring-2 {
+    animation-delay: 0.8s;
+  }
+  .mw-ring-3 {
+    animation-delay: 1.6s;
+  }
+  .mw-foam {
+    animation: mw-foam 1.3s ease-in-out infinite;
+  }
+  .mw-drop {
+    animation: mw-drop 1.6s ease-out infinite;
+  }
+}
+@keyframes mw-sway {
+  0%,
+  100% {
+    transform: translate(500px, 360px) rotate(119.2deg);
+  }
+  50% {
+    transform: translate(500px, 360px) rotate(120.8deg);
+  }
+}
+@keyframes mw-slosh {
+  0%,
+  100% {
+    transform: rotate(-3.2deg) translateY(2px);
+  }
+  50% {
+    transform: rotate(3.2deg) translateY(-2px);
+  }
+}
+@keyframes mw-wobble {
+  from {
+    transform: rotate(-0.8deg);
+  }
+  to {
+    transform: rotate(0.8deg);
+  }
+}
+@keyframes mw-glug {
+  0%,
+  100% {
+    stroke-width: 8px;
+  }
+  50% {
+    stroke-width: 10.5px;
+  }
+}
+@keyframes mw-flow {
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+@keyframes mw-wave-a {
+  to {
+    transform: translateX(-150px);
+  }
+}
+@keyframes mw-wave-b {
+  from {
+    transform: translateX(-190px);
+  }
+  to {
+    transform: translateX(-40px);
+  }
+}
+@keyframes mw-ring {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes mw-foam {
+  0%,
+  100% {
+    transform: scale(0.85);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+@keyframes mw-drop {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  45% {
+    transform: translate(calc(var(--dx) * 0.6), var(--dy));
+  }
+  100% {
+    transform: translate(var(--dx), 6px);
+    opacity: 0;
+  }
+}
+@media (max-width: 700px) {
+  .menu-wine-scene {
+    width: min(98vw, 64vh);
+    opacity: 0.6;
+  }
+}
