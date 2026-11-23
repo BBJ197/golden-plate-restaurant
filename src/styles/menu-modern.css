@@ -1,4 +1,4 @@
-﻿/* Menu page: modern dark look that matches the home page. Loaded last. */
+/* Menu page: modern dark look that matches the home page. Loaded last. */
 .menu-page {
   --menu-glass: rgba(255, 255, 255, 0.06);
   --menu-glass-border: rgba(255, 255, 255, 0.12);
@@ -493,5 +493,28 @@ html body .menu-page::after {
   html body .menu-page {
     background-attachment: scroll !important;
     background-position: 70% center !important;
+  }
+}
+
+/* WINE STREAM MOTION V2 */
+html body .menu-page {
+  background-image:
+    url("/assets/images/menu-wine-motion.svg"),
+    url("/assets/images/menu%20background.png") !important;
+  background-position:
+    center center,
+    center center !important;
+  background-size: cover, cover !important;
+  background-repeat: no-repeat, no-repeat !important;
+}
+
+html body .menu-page::after {
+  content: none !important;
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body .menu-page {
+    background-image: url("/assets/images/menu%20background.png") !important;
   }
 }
