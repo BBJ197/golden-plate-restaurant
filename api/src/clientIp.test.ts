@@ -4,10 +4,11 @@ import { clientIp } from "./clientIp";
 
 const SECRET = "s3cret-value";
 
-function ipFor(headers: Record<string, string>, secret?: string) {
+async function ipFor(headers: Record<string, string>, secret?: string) {
   const app = new Hono();
   app.get("/", (c) => c.text(clientIp(c, secret)));
-  return app.request("/", { headers }).then((r) => r.text());
+  const res = await app.request("/", { headers });
+  return res.text();
 }
 
 describe("clientIp", () => {
