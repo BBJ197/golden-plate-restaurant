@@ -4,6 +4,8 @@ import type { Menu, MenuItem } from "../api/menu";
 import { useMenu } from "../api/useMenu";
 import MenuIcon from "../components/MenuIcon";
 import MobileTabBar from "../components/MobileTabBar";
+import bottle from "../assets/images/bottle.png";
+import glass from "../assets/images/glass.png";
 import {
   emptyFilters,
   filterItems,
@@ -119,7 +121,51 @@ export default function MenuPage() {
   return (
     <main id="main" className="menu-page">
       <div className="menu-pans" aria-hidden="true">
-        <div className="menu-pan menu-pan-main" />
+        <div className="menu-wine-scene">
+          <svg viewBox="0 0 1000 960" focusable="false">
+            <defs>
+              <clipPath id="mw-bowl">
+                <path d="M218 55C190 160 182 260 186 340C195 440 280 520 370 524C460 520 548 440 552 340C558 260 548 160 522 55Z" />
+              </clipPath>
+              <linearGradient id="mw-wine-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stopColor="#b3202f" />
+                <stop offset="0.35" stopColor="#6b0c1b" />
+                <stop offset="1" stopColor="#2e0409" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(520 240) scale(0.62)">
+              <g clipPath="url(#mw-bowl)">
+                <rect
+                  className="mw-wine"
+                  x="150"
+                  y="40"
+                  width="450"
+                  height="520"
+                  fill="url(#mw-wine-grad)"
+                />
+              </g>
+              <image href={glass} width="736" height="1104" />
+            </g>
+            <path
+              className="mw-stream"
+              d="M712 240C716 300 722 420 726 548"
+              pathLength={1}
+              fill="none"
+              stroke="#8f1627"
+              strokeWidth="7"
+              strokeLinecap="round"
+            />
+            <g className="mw-bottle">
+              <image
+                href={bottle}
+                x="-297.6"
+                y="-318.7"
+                width="595.2"
+                height="634.9"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
       <section className="menu-banner" aria-labelledby="menu-title">
         <div className="menu-banner-bar">
