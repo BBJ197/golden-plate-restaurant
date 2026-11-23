@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import main from "../assets/images/central.png";
-import sause from "../assets/images/sause.png";
-import salt from "../assets/images/salt.png";
-import salad from "../assets/images/wooden.png";
-import cake from "../assets/images/Strawberry chocolate cake.png";
+import main from "../assets/images/central.webp";
+import sause from "../assets/images/sause.webp";
+import salt from "../assets/images/salt.webp";
+import salad from "../assets/images/wooden.webp";
+import cake from "../assets/images/strawberry-chocolate-cake.webp";
 
 export default function Hero() {
   return (

@@ -4,12 +4,14 @@ const schema = z.object({
   DATABASE_URL: z.string().min(1),
   PORT: z.coerce.number().int().positive().default(3001),
   CORS_ORIGIN: z.string().default("http://localhost:5173"),
+  // Optional: lets the API trust the visitor IP forwarded by the Cloudflare proxy.
+  PROXY_SECRET: z.string().min(16).optional(),
   // Optional: email each contact message to the owner (via resend.com).
   RESEND_API_KEY: z.string().optional(),
   CONTACT_TO_EMAIL: z.string().optional(),
   CONTACT_FROM_EMAIL: z
     .string()
-    .default("Alemitu Coffee <onboarding@resend.dev>"),
+    .default("Golden Plate <onboarding@resend.dev>"),
 });
 
 export function loadConfig(env: NodeJS.ProcessEnv = process.env) {

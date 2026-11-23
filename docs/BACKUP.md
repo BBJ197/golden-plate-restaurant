@@ -10,7 +10,7 @@ A GitHub Actions workflow (`Database backup`) saves a copy of the Neon database 
 
 ## Run a backup now
 
-Open the Actions tab, choose Database backup, then Run workflow. When it finishes, open the run and download the artifact named `alemitu-backup-...`. It is a zip file containing `alemitu-backup.dump`.
+Open the Actions tab, choose Database backup, then Run workflow. When it finishes, open the run and download the artifact named `golden-plate-backup-...`. It is a zip file containing `golden-plate-backup.dump`.
 
 Backups are kept for 90 days. Once a month, download one to your computer and keep it somewhere safe. It contains the admin password hash and customer messages, so keep the repo private.
 
@@ -19,6 +19,6 @@ Backups are kept for 90 days. Once a month, download one to your computer and ke
 1. Create a new empty Neon project.
 2. With the PostgreSQL client tools installed, run:
 
-       pg_restore --no-owner --no-privileges -d "NEW_NEON_CONNECTION_STRING" alemitu-backup.dump
+       pg_restore --no-owner --no-privileges -d "NEW_NEON_CONNECTION_STRING" golden-plate-backup.dump
 
 3. In Render, set `DATABASE_URL` to the new connection string (with `sslmode=verify-full`) and redeploy.

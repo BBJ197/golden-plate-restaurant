@@ -38,7 +38,7 @@ async function withApi(fn: (ctx: Ctx) => Promise<void>) {
         headers: {
           "content-type": "application/json",
           origin: ORIGIN,
-          cookie: `alemitu_session=${token}`,
+          cookie: `golden_plate_session=${token}`,
         },
         body: body === undefined ? undefined : JSON.stringify(body),
       });

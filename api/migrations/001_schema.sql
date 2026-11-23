@@ -1,4 +1,4 @@
--- Alemitu Digital Menu: schema (plain PostgreSQL)
+-- Golden Plate Digital Menu: schema (plain PostgreSQL)
 
 create function set_updated_at()
 returns trigger

@@ -1,5 +1,5 @@
 ﻿import { type CSSProperties } from "react";
-import plate from "../assets/images/plate.png";
+import plate from "../assets/images/plate.webp";
 import "../styles/plate-scene.css";
 
 type Rim = CSSProperties & Record<`--${string}`, string>;

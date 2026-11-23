@@ -9,12 +9,12 @@ import {
   faInstagram,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import wine from "./assets/images/wine.png";
-import cocktails from "./assets/images/Cocktails.png";
-import starter from "./assets/images/starter.png";
-import tastingMenu from "./assets/images/Tasting Menu.png";
-import steak from "./assets/images/stake.png";
-import cake from "./assets/images/cake.png";
+import wine from "./assets/images/wine.webp";
+import cocktails from "./assets/images/cocktails.webp";
+import starter from "./assets/images/starter.webp";
+import tastingMenu from "./assets/images/tasting-menu.webp";
+import steak from "./assets/images/stake.webp";
+import cake from "./assets/images/cake.webp";
 
 export const menuItems = [
   {

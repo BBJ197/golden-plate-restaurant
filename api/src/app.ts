@@ -10,6 +10,7 @@ import {
   requireAdmin,
   setSessionCookie,
 } from "./auth";
+import { clientIp } from "./clientIp";
 import type { Db } from "./db";
 import { adminCategories } from "./adminCategories";
 import { adminItems } from "./adminItems";
@@ -29,6 +30,8 @@ export interface AppOptions {
   /** Sends the owner an email for each contact message. Optional. */
   notify?: Notify;
   contactLimiter?: ContactLimiter;
+  /** Shared with the Cloudflare proxy so the visitor's real IP can be trusted. */
+  proxySecret?: string;
 }
 
 export function createApp(db: Db, opts: AppOptions) {
@@ -56,6 +59,7 @@ export function createApp(db: Db, opts: AppOptions) {
       corsOrigin: opts.corsOrigin,
       notify: opts.notify,
       limiter: opts.contactLimiter,
+      proxySecret: opts.proxySecret,
     }),
   );
 
@@ -135,8 +139,7 @@ export function createApp(db: Db, opts: AppOptions) {
       return c.json({ error: "invalid_credentials" }, 401);
     }
 
-    const ip =
-      c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "local";
+    const ip = clientIp(c, opts.proxySecret);
     const key = `${ip}|${email}`;
     if (limiter.isBlocked(key))
       return c.json({ error: "too_many_attempts" }, 429);
